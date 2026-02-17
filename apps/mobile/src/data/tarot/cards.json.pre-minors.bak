@@ -1,0 +1,1056 @@
+[
+  {
+    "id": "fool",
+    "name": "The Fool",
+    "suit": "major",
+    "number": 0,
+    "imageAsset": "fool.png",
+    "keywords": [
+      "new beginnings",
+      "leap of faith",
+      "spontaneity",
+      "curiosity",
+      "fresh start",
+      "trust"
+    ],
+    "meaningUpright": "new beginnings, leap of faith, spontaneity, curiosity, fresh start, trust",
+    "meaningReversed": "recklessness, avoidance, naivety, poor planning, fear of change, carelessness",
+    "description": "An opening door and a fresh wind at your back. This card invites a leap of faith into a new chapter where curiosity matters more than certainty. Go light, stay present, and learn as you go—just keep enough awareness to avoid preventable mistakes.",
+    "meaningsUpright": {
+      "love": "Romance wants to feel alive again—playful, spontaneous, and open-hearted. If single, say yes to conversations and invitations that break your usual pattern. In partnership, plan something new together and remember that joy is also a form of commitment.",
+      "health": "Renewal through simple changes: movement, daylight, and a beginner’s routine you can actually keep. Your energy improves when you treat health like an adventure, not a punishment. Be mindful of distraction and impulsive risks—small accidents are the classic Fool pitfall.",
+      "moneyCareer": "Opportunity arrives as a ‘first step’ rather than a finished plan. Great for starting a project, pitching an idea, applying for a role, or testing a new direction. Do the basics—budget, timeline, next action—then move boldly instead of waiting for perfect readiness.",
+      "spirituality": "Beginner’s mind is your superpower right now. Explore practices without needing to ‘belong’ immediately; experience will teach you faster than theory. Trust gentle signs and inner nudges, and let curiosity guide the next step."
+    },
+    "meaningsReversed": {
+      "love": "Mixed signals, avoidance, or commitment anxiety can muddy the waters. Don’t mistake intensity for compatibility; ask direct questions and watch actions, not potential. If you keep repeating the same ‘almost’ story, this is your cue to change the pattern.",
+      "health": "Distraction and stress can make you accident-prone or inconsistent with routines. Choose one or two foundational habits and protect them with boundaries. If you’ve been ignoring symptoms, schedule the checkup instead of hoping it resolves on its own.",
+      "moneyCareer": "Great idea, shaky execution—or fear that keeps you from starting at all. Add structure: scope, milestones, and a simple risk plan before making a jump. Stay open to the new path, but stop gambling your reputation on half-prepared moves.",
+      "spirituality": "Exploration is fine, but avoid spiritual escapism or chasing shiny ‘quick fixes’. Ground insights in real life: how you speak, spend, rest, and relate. Consistency—five minutes daily—will beat sporadic intensity every time."
+    },
+    "descriptionReversed": "Either you’re hesitating at the threshold or charging ahead without looking. The reversal flags poor timing, missing information, or fear disguised as ‘being practical’. Slow down long enough to check the basics, then choose one clear step forward."
+  },
+  {
+    "id": "magician",
+    "name": "The Magician",
+    "suit": "major",
+    "number": 1,
+    "imageAsset": "magician.png",
+    "keywords": [
+      "manifestation",
+      "skill",
+      "focus",
+      "resourcefulness",
+      "initiative",
+      "communication"
+    ],
+    "meaningUpright": "manifestation, skill, focus, resourcefulness, initiative, communication",
+    "meaningReversed": "manipulation, misdirection, scattered energy, underused talent, shortcuts, self-doubt",
+    "description": "You have the tools, the talent, and the timing to make something real. Focus turns possibility into momentum: intention, attention, then action. Use your skills with integrity and you can move from idea to outcome quickly.",
+    "meaningsUpright": {
+      "love": "Chemistry and clear communication create spark here. If single, confidence and authenticity are magnetic—lead with what you want, not what you think will be liked. In a relationship, choose intentional effort: honest conversations, planned quality time, and follow-through.",
+      "health": "Mind–body alignment is strong; small choices compound fast. Pick a simple program and commit to it long enough to see results. Your mindset matters, but so does craft: use evidence-based care and track what’s working.",
+      "moneyCareer": "Excellent for pitching, negotiating, building, shipping, and being seen for what you can do. Combine creativity with a concrete plan and you’ll convince the right people. Put your resources to work—tools, network, and time—rather than waiting for permission.",
+      "spirituality": "Conscious manifestation and ritual work are supported. Set intentions precisely and keep your ethics explicit—power without integrity backfires. Practice becomes your wand: repetition, devotion, and clarity create ‘magical’ results."
+    },
+    "meaningsReversed": {
+      "love": "Charm without sincerity can create confusion or disappointment. Ask for clarity and watch whether promises match behavior. If you’re hiding behind a persona, drop it—real intimacy needs honesty, not performance.",
+      "health": "Stress, inconsistency, or chasing many remedies at once can blunt progress. Choose one grounded approach and support it with sleep, hydration, and routine. If symptoms feel confusing, seek a second opinion rather than spiraling online.",
+      "moneyCareer": "Overpromising, cutting corners, or trying to do everything at once drains credibility. Refocus on a narrow deliverable and ship it well. Avoid shady deals and ‘too good to be true’ money moves; verify terms before committing.",
+      "spirituality": "Beware ego-driven spirituality or guru-dependence. Return to basics: daily practice, humility, and discernment. Your power returns when you align intention with service and integrity."
+    },
+    "descriptionReversed": "Energy is scattered or confidence is wobbling, so outcomes feel delayed. Sometimes this reversal flags manipulation—someone (or your own ego) selling an illusion. Return to truth, simplify the plan, and rebuild momentum through consistent execution."
+  },
+  {
+    "id": "high_priestess",
+    "name": "The High Priestess",
+    "suit": "major",
+    "number": 2,
+    "imageAsset": "high_priestess.png",
+    "keywords": [
+      "intuition",
+      "inner knowing",
+      "mystery",
+      "patience",
+      "subconscious",
+      "discernment"
+    ],
+    "meaningUpright": "intuition, inner knowing, mystery, patience, subconscious, discernment",
+    "meaningReversed": "ignored intuition, secrets, confusion, emotional noise, overthinking, misread signals",
+    "description": "Not everything is meant to be decided with logic today. Quiet observation reveals what’s hidden—motives, patterns, and timing. Trust your inner knowing and allow space for the full story to surface.",
+    "meaningsUpright": {
+      "love": "Depth, privacy, and emotional intuition are highlighted. If single, you may be drawn to someone mysterious; take your time and let trust build. In relationships, listen beneath the words—what’s unspoken often matters most.",
+      "health": "Your body is speaking through subtle signals: sleep, cycles, cravings, and mood. Track patterns and advocate for yourself if something feels off. Rest and nervous-system care are as important as productivity.",
+      "moneyCareer": "Research, strategy, and timing beat loud action right now. Keep plans close, observe dynamics, and gather the missing data. Your intuition about people and risks is sharp—use it, then verify with facts.",
+      "spirituality": "Dreams, synchronicities, and symbols become teaching tools. Make space for silence—meditation or journaling will unlock insight. Trust the quiet path; your growth is happening internally first."
+    },
+    "meaningsReversed": {
+      "love": "Unclear signals can trigger suspicion or emotional spirals. Name what you need and don’t rely on guesswork. If trust has been shaken, the path forward is transparency and consistent behavior.",
+      "health": "Anxiety and overstimulation can make symptoms feel louder. Reduce inputs and return to restorative basics. If concerns persist, get professional guidance rather than self-diagnosing.",
+      "moneyCareer": "Information gaps or politics can trip you up if you move too fast. Document decisions, confirm agreements, and be selective about what you share. If you’ve been doubting yourself, seek one trusted mentor or data source and rebuild confidence.",
+      "spirituality": "Spiritual signals may feel ‘blocked’ because life is too loud. Reconnect through simple daily practice instead of searching for dramatic experiences. Your inner voice returns when you protect quiet time like it matters—because it does."
+    },
+    "descriptionReversed": "Intuition is present, but you may be overriding it with noise, fear, or other people’s opinions. Secrets, confusion, or overthinking can distort your read on the situation. Create stillness, ask direct questions, and stop filling gaps with assumptions."
+  },
+  {
+    "id": "empress",
+    "name": "The Empress",
+    "suit": "major",
+    "number": 3,
+    "imageAsset": "empress.png",
+    "keywords": [
+      "nurturing",
+      "abundance",
+      "creativity",
+      "sensuality",
+      "growth",
+      "comfort"
+    ],
+    "meaningUpright": "nurturing, abundance, creativity, sensuality, growth, comfort",
+    "meaningReversed": "depletion, insecurity, overgiving, creative block, neglect, imbalance",
+    "description": "This is fertile ground—what you nurture grows. Abundance here is practical: consistent care, patience, and embodied presence. Let yourself receive support and enjoy the beauty you’re building.",
+    "meaningsUpright": {
+      "love": "Warmth, affection, and devotion are available. Relationships thrive when you prioritize comfort, safety, and appreciation. This card often favors commitment that feels nourishing rather than demanding.",
+      "health": "Support your body with nourishment, rest, and gentle consistency. Health improves when you treat recovery as a sacred process, not an inconvenience. Grounding routines—food, sleep, nature—restore vitality.",
+      "moneyCareer": "Create, cultivate, and protect the work that matters. Great for building a brand, product, portfolio, or community with steady growth. Lead with care: boundaries plus generosity help projects flourish.",
+      "spirituality": "Nature, beauty, and gratitude become your practice. Connect with the divine through creativity and caretaking. When you slow down and receive, intuition and compassion deepen."
+    },
+    "meaningsReversed": {
+      "love": "Neediness, resentment, or people-pleasing can distort the relationship. Say what you need plainly and stop testing partners to see if they ‘notice’. Softness without clarity becomes self-neglect—choose both.",
+      "health": "Stress can accumulate when rest is postponed. Stabilize basics first: sleep, food, hydration, and movement. Respond early when your body asks for help instead of pushing through.",
+      "moneyCareer": "Creative blocks and burnout show up when output replaces nourishment. Reduce scope, prioritize recovery, and return to meaningful work. Delegation and boundaries are productivity tools—use them.",
+      "spirituality": "Your spirit may feel distant because your body is exhausted. Return to grounding practices and compassionate self-talk. Receive support—community can help you rebuild connection."
+    },
+    "descriptionReversed": "Depletion is the warning: you can’t pour from an empty cup. Insecurity or overgiving may be driving your choices. Rebuild self-worth with boundaries and practical self-care before you push output."
+  },
+  {
+    "id": "emperor",
+    "name": "The Emperor",
+    "suit": "major",
+    "number": 4,
+    "imageAsset": "emperor.png",
+    "keywords": [
+      "structure",
+      "authority",
+      "discipline",
+      "stability",
+      "protection",
+      "leadership"
+    ],
+    "meaningUpright": "structure, authority, discipline, stability, protection, leadership",
+    "meaningReversed": "control issues, rigidity, power struggle, chaos, stubbornness, lack of boundaries",
+    "description": "Structure creates freedom: define roles, rules, and priorities. Leadership here is steadiness, accountability, and protection. Build what lasts by doing the boring essentials well.",
+    "meaningsUpright": {
+      "love": "Commitment and reliability are emphasized. Love is expressed through consistency, provision, and clear boundaries. Be careful not to confuse protection with control—healthy authority respects autonomy.",
+      "health": "Consistency beats intensity: follow a realistic plan and track progress. Mind posture, stress, and overwork—your body responds to pressure. Recovery is part of discipline; schedule it like a meeting.",
+      "moneyCareer": "Excellent for management, strategy, operations, and long-term planning. Put systems in place, enforce standards, and make decisions based on evidence. Your influence grows when you act with fairness and consistency.",
+      "spirituality": "Ground spirituality in ethics and responsibility. Daily practice, service, and integrity become your ‘ritual’. True strength is being dependable to your own values."
+    },
+    "meaningsReversed": {
+      "love": "Control, emotional distance, or stubbornness can freeze intimacy. Practice mutual decision-making and repair quickly when pride takes over. If you feel dominated, set boundaries; if you dominate, examine the insecurity beneath it.",
+      "health": "Stress from over-control can manifest physically. Loosen punishing routines and choose sustainable habits. Seek support if tension, anger, or sleeplessness becomes your baseline.",
+      "moneyCareer": "A controlling boss, politics, or brittle processes can block progress. Document your work and avoid escalating conflict—choose strategic boundaries. If you’ve been disorganized, rebuild routines and accountability.",
+      "spirituality": "Question external authority without swinging into cynicism. Keep what’s useful from tradition, but reclaim responsibility for your path. Discipline can be devotional—just don’t weaponize it against yourself."
+    },
+    "descriptionReversed": "Power struggles, rigidity, or chaos from missing structure are highlighted. Either the rules are too tight—or there are no rules at all. Rebuild healthy authority: firm, fair, and flexible enough to evolve."
+  },
+  {
+    "id": "hierophant",
+    "name": "The Hierophant",
+    "suit": "major",
+    "number": 5,
+    "imageAsset": "hierophant.png",
+    "keywords": [
+      "tradition",
+      "mentorship",
+      "values",
+      "community",
+      "education",
+      "commitment"
+    ],
+    "meaningUpright": "tradition, mentorship, values, community, education, commitment",
+    "meaningReversed": "nonconformity, questioning rules, new path, value clash, unorthodox, inner authority",
+    "description": "Tradition, mentorship, and shared values offer stability. Learn from what has worked before—teachers, institutions, or structured study. Commit to a path long enough to master it.",
+    "meaningsUpright": {
+      "love": "Aligned values matter more than fireworks here. Good for defining the relationship or making formal commitments. Look for consistency and integrity, not just chemistry.",
+      "health": "Routine and conventional care tend to help most in this phase. Consistency with proven methods beats experimentation. Build a schedule that supports sleep, movement, and steady nourishment.",
+      "moneyCareer": "Training, certification, and working within systems are favored. Seek mentors and follow proven processes; credibility grows through discipline. Professionalism and reliability open doors now.",
+      "spirituality": "Community practice and study deepen faith. Ritual can be grounding—prayer, meditation, or devotion. Let ethics guide your spiritual life as much as inspiration."
+    },
+    "meaningsReversed": {
+      "love": "Unconventional relationships or value clashes may surface. Have explicit conversations about expectations and boundaries. Respect difference without forcing conformity.",
+      "health": "Alternative approaches can help, but vet them for safety and evidence. Update rigid routines that create stress rather than health. Balance experimentation with professional guidance.",
+      "moneyCareer": "Bureaucracy can feel suffocating; innovation wants room to breathe. Work around constraints strategically or choose a culture that matches you. Don’t burn bridges—use clear communication and smart timing.",
+      "spirituality": "Personalized spirituality—less dogma, more lived truth. Explore broadly, but avoid guru-dependence and keep discernment active. Your path strengthens when it reflects your authentic values."
+    },
+    "descriptionReversed": "You’re questioning rules that no longer fit. Keep the wisdom, discard the rigidity, and define your principles. Rebellion becomes powerful when it’s guided by values, not just frustration."
+  },
+  {
+    "id": "lovers",
+    "name": "The Lovers",
+    "suit": "major",
+    "number": 6,
+    "imageAsset": "lovers.png",
+    "keywords": [
+      "union",
+      "choice",
+      "alignment",
+      "attraction",
+      "values",
+      "partnership"
+    ],
+    "meaningUpright": "union, choice, alignment, attraction, values, partnership",
+    "meaningReversed": "misalignment, indecision, temptation, dishonesty, conflict, mixed priorities",
+    "description": "Choice and alignment are central: what you choose reveals your values. This card can signal union, but it also asks for integrity—head, heart, and actions in harmony. Choose what strengthens trust and self-respect.",
+    "meaningsUpright": {
+      "love": "Deep connection and the possibility of committed partnership. Love grows when you choose honesty over convenience and alignment over drama. If single, look for shared values as well as chemistry.",
+      "health": "Balance is created through daily choices—food, movement, rest, stress habits. Notice where you’re split: wanting health but choosing depletion. Small consistent alignment brings big change.",
+      "moneyCareer": "Partnerships and value-driven decisions. Great for contracts and alliances when terms are fair and transparent. Choose projects that match your long-term identity, not just short-term profit.",
+      "spirituality": "Union of opposites—mind and heart—creates wholeness. Practice forgiveness and truth-telling with yourself. Commit to a path that feels ethically clean."
+    },
+    "meaningsReversed": {
+      "love": "Trust issues or incompatible values can surface. Repair requires honesty, boundaries, and consistent actions—not grand gestures. If a dynamic asks you to abandon yourself, consider closing the chapter.",
+      "health": "Inconsistency undermines progress. Pick a realistic routine and follow it; stop bargaining with your well-being. Address emotional triggers that sabotage habits.",
+      "moneyCareer": "Conflicting commitments or unclear agreements. Stop hedging: choose one direction and renegotiate what doesn’t fit. Avoid partnerships where incentives and values are misaligned.",
+      "spirituality": "Realignment is the lesson: release guilt and people-pleasing. Choose congruence over approval. Integrity restores inner peace."
+    },
+    "descriptionReversed": "Misalignment and indecision create friction. You may be tempted to choose what feels good now at the expense of what is true. Clarify values, then make a clean choice instead of living in ambiguity."
+  },
+  {
+    "id": "chariot",
+    "name": "The Chariot",
+    "suit": "major",
+    "number": 7,
+    "imageAsset": "chariot.png",
+    "keywords": [
+      "determination",
+      "momentum",
+      "discipline",
+      "victory",
+      "direction",
+      "drive"
+    ],
+    "meaningUpright": "determination, momentum, discipline, victory, direction, drive",
+    "meaningReversed": "scattered, loss of control, aggression, stalling, conflict, overcompensation",
+    "description": "Determination and direction: you win by choosing a destination and staying with it. Discipline turns conflicting forces into forward motion. Momentum builds fast when you commit and manage distractions.",
+    "meaningsUpright": {
+      "love": "Strong pursuit and clear intention. Healthy relationships here need shared goals and respect for boundaries. Steer conflict toward solutions rather than power struggles.",
+      "health": "Physical progress comes through training and routine. Channel intensity into sustainable habits and avoid overexertion. Measure improvement over weeks, not days.",
+      "moneyCareer": "Excellent for launches, negotiations, travel, and leadership under pressure. Success comes from preparation, focus, and decisive action. Pick priorities, track progress, and keep moving even when emotions fluctuate.",
+      "spirituality": "Willpower can be devotional when aligned with values. Direct energy intentionally—practice, study, or service. Consistency accelerates growth."
+    },
+    "meaningsReversed": {
+      "love": "Control battles or emotional whiplash can appear. Slow down and set shared rules for conflict and communication. Return to self-respect if you’re chasing validation.",
+      "health": "Inconsistency or overtraining can cause setbacks. Choose pacing, recovery, and a plan you can keep. Stress management is part of performance.",
+      "moneyCareer": "Project drift, delays, or burnout from trying to force outcomes. Reduce scope, restore accountability, and rebuild momentum with small wins. Don’t let urgency replace strategy.",
+      "spirituality": "Ego can try to ‘drive’ the spiritual path. Return to humility and grounded practice. Real progress comes from alignment, not force."
+    },
+    "descriptionReversed": "Movement without direction creates chaos. Competing priorities or emotions can pull you off course. Regain control by simplifying goals and rebuilding a steady plan."
+  },
+  {
+    "id": "strength",
+    "name": "Strength",
+    "suit": "major",
+    "number": 8,
+    "imageAsset": "strength.png",
+    "keywords": [
+      "courage",
+      "patience",
+      "inner power",
+      "compassion",
+      "self-control",
+      "resilience"
+    ],
+    "meaningUpright": "courage, patience, inner power, compassion, self-control, resilience",
+    "meaningReversed": "self-doubt, reactivity, insecurity, burnout, fear, loss of patience",
+    "description": "True strength is calm courage, not domination. Face the challenge with patience, compassion, and steady confidence. Gentleness is the force that tames fear.",
+    "meaningsUpright": {
+      "love": "Emotional bravery deepens intimacy. Speak honestly without harshness and choose repair over winning. This supports loyalty, trust, and a love built on respect.",
+      "health": "Resilience improves with routine and stress reduction. Work with your body, not against it—small changes build strength. Mind–body practices can be especially supportive now.",
+      "moneyCareer": "Steady leadership and conflict de-escalation. Influence increases when you stay grounded under pressure. Persist with consistent effort; you don’t need dramatic moves to succeed.",
+      "spirituality": "Heart-led power: kindness as discipline. Practice compassion toward yourself and others. When your nervous system settles, intuition and faith become clearer."
+    },
+    "meaningsReversed": {
+      "love": "Sensitivity can show up as defensiveness. Repair requires vulnerability and accountability. If you feel unseen, ask clearly rather than testing or withdrawing.",
+      "health": "Stress can drain vitality. Prioritize sleep, hydration, and gentle movement. Support your body instead of punishing it for being tired.",
+      "moneyCareer": "Imposter feelings or fear of conflict can stall progress. Ask for support, set boundaries, and focus on dependable execution. Confidence returns when you keep promises to yourself.",
+      "spirituality": "Compassion begins at home. Let go of harsh inner judgment and return to simple practice. Courage grows when you treat yourself like someone you love."
+    },
+    "descriptionReversed": "Self-doubt, reactivity, or burnout may be undermining confidence. You might be trying to control outcomes because you don’t trust yourself with discomfort. Rebuild strength through small wins and self-respect."
+  },
+  {
+    "id": "hermit",
+    "name": "The Hermit",
+    "suit": "major",
+    "number": 9,
+    "imageAsset": "hermit.png",
+    "keywords": [
+      "solitude",
+      "reflection",
+      "wisdom",
+      "inner search",
+      "clarity",
+      "guidance"
+    ],
+    "meaningUpright": "solitude, reflection, wisdom, inner search, clarity, guidance",
+    "meaningReversed": "isolation, avoidance, loneliness, withdrawal, stagnation, overthinking",
+    "description": "Step back to see clearly. This is a season of reflection, research, and honest self-inquiry. Solitude is productive when it leads to wise action.",
+    "meaningsUpright": {
+      "love": "Space and pacing can be healthy when communicated. If single, refine what you truly want rather than settling. In relationships, deepen connection through thoughtful conversation.",
+      "health": "Recovery improves with rest and simplification. Listen to what your body needs rather than what your schedule demands. Quiet routines—walking, stretching, sleep—can be powerful medicine.",
+      "moneyCareer": "Deep work, study, and strategic planning are favored. Reduce noise so you can produce quality and insight. A mentor may appear—or you may become one through experience.",
+      "spirituality": "An inward pilgrimage. Meditation and journaling illuminate the next step. Trust the lantern: you only need light for the next part of the path."
+    },
+    "meaningsReversed": {
+      "love": "Emotional distance or fear of intimacy can hurt trust. Name your need for space and stay present in communication. If loneliness is the real issue, reach out instead of withdrawing.",
+      "health": "Low mood or inactivity can compound fatigue. Add light movement and social contact to restore energy. Seek professional support if symptoms persist.",
+      "moneyCareer": "Analysis paralysis delays progress. Ship a smaller version, get feedback, and iterate. Advocate calmly if you feel unseen.",
+      "spirituality": "Growth doesn’t require hiding. Consider community or shared practice. Balance solitude with connection so wisdom can be lived."
+    },
+    "descriptionReversed": "Solitude may have tipped into isolation or avoidance. Overthinking can replace action and deepen stagnation. Reconnect with supportive people and take one practical step."
+  },
+  {
+    "id": "wheel_of_fortune",
+    "name": "Wheel of Fortune",
+    "suit": "major",
+    "number": 10,
+    "imageAsset": "wheel_of_fortune.png",
+    "keywords": [
+      "change",
+      "cycles",
+      "luck",
+      "turning point",
+      "timing",
+      "opportunity"
+    ],
+    "meaningUpright": "change, cycles, luck, turning point, timing, opportunity",
+    "meaningReversed": "resistance, bad timing, setback, repeat patterns, instability, delays",
+    "description": "A turning point: cycles shift, and timing matters. Stay adaptable—change can open doors if you respond wisely. Focus on what you can control: attitude, preparation, and choices.",
+    "meaningsUpright": {
+      "love": "Unexpected meetings or relationship shifts are possible. Let the connection evolve naturally rather than forcing outcomes. Sometimes love improves when you stop repeating an old pattern.",
+      "health": "Energy can fluctuate; track patterns and respond early. Small adjustments create stability across cycles. Consistency improves the long-term trend.",
+      "moneyCareer": "Market forces or new opportunities can appear suddenly. Keep options open and be ready to act when the window opens. Networking and flexibility increase your luck.",
+      "spirituality": "Trust the timing of lessons. Synchronicities can point you toward alignment. Release control where it’s unhelpful and lean into growth."
+    },
+    "meaningsReversed": {
+      "love": "On-and-off dynamics or repeated lessons in relationships. Stabilize through clear agreements or allow the cycle to complete. Don’t confuse fate with familiarity.",
+      "health": "Inconsistent routines create emotional and physical swings. Return to basics and track triggers. Patience and repetition produce stability.",
+      "moneyCareer": "Delays and unpredictability require buffers. Make contingency plans and avoid impulsive pivots. Refine strategy rather than blaming bad luck.",
+      "spirituality": "Lessons repeat until integrated. Reflect on what keeps resurfacing and choose a new response. Acceptance is clarity, not passivity."
+    },
+    "descriptionReversed": "Resistance to change can turn a cycle into a struggle. Setbacks often reveal a pattern that needs updating. Adjust your response and you change the outcome of the ‘wheel’."
+  },
+  {
+    "id": "justice",
+    "name": "Justice",
+    "suit": "major",
+    "number": 11,
+    "imageAsset": "justice.png",
+    "keywords": [
+      "truth",
+      "fairness",
+      "accountability",
+      "clarity",
+      "law",
+      "balance"
+    ],
+    "meaningUpright": "truth, fairness, accountability, clarity, law, balance",
+    "meaningReversed": "dishonesty, bias, avoidance, unfairness, blame, imbalance",
+    "description": "Truth and accountability are emphasized. Choices have consequences, and clarity arrives when you face facts. Do what’s fair—even when it’s inconvenient—and balance returns.",
+    "meaningsUpright": {
+      "love": "Honesty and equal effort restore stability. Define agreements clearly and repair breaches directly. Choose the path that honors self-respect.",
+      "health": "Balance inputs and outputs: sleep, stress, nutrition, movement. Seek accurate diagnosis and follow through with consistent care. Well-being improves when basics are non-negotiable.",
+      "moneyCareer": "Contracts, negotiations, and performance reviews are highlighted. Document decisions and act ethically—reputation is currency. Advocate with evidence if something is unfair.",
+      "spirituality": "Integrity is your practice. Align actions with values and release self-deception. Clarity becomes a spiritual cleansing."
+    },
+    "meaningsReversed": {
+      "love": "Unequal effort or hidden truths. Repair requires accountability, not defensiveness. If fairness can’t be restored, a clean boundary may be needed.",
+      "health": "Neglecting basics or denying symptoms creates imbalance. Gather real data and build a consistent plan. Self-compassion helps you change without shame.",
+      "moneyCareer": "Politics or unfair evaluation may be present. Protect yourself with documentation and clear communication. Don’t mirror unethical behavior; it costs more than it pays.",
+      "spirituality": "Drop moral superiority and practice humility. Repair what you can and forgive where appropriate. Alignment returns when you live your values."
+    },
+    "descriptionReversed": "Bias or avoidance can distort reality. Someone may be bending the truth—or you may be minimizing your part. Correct the record, take responsibility, and choose repair over blame."
+  },
+  {
+    "id": "hanged_man",
+    "name": "The Hanged Man",
+    "suit": "major",
+    "number": 12,
+    "imageAsset": "hanged_man.png",
+    "keywords": [
+      "pause",
+      "surrender",
+      "new perspective",
+      "letting go",
+      "patience",
+      "reframe"
+    ],
+    "meaningUpright": "pause, surrender, new perspective, letting go, patience, reframe",
+    "meaningReversed": "stuck, martyrdom, avoidance, impatience, wasted time, resistance",
+    "description": "A deliberate pause brings a new perspective. When you stop forcing, the right solution becomes visible. Surrender here is strategic: it trades urgency for insight.",
+    "meaningsUpright": {
+      "love": "Patience and empathy are needed. Pause reactive patterns and consider the other viewpoint. This can reset a relationship if reflection replaces blame.",
+      "health": "Rest and recovery are part of progress. Look at lifestyle causes from a new angle—stress, sleep, pacing. Give your body time to integrate changes.",
+      "moneyCareer": "Delays can be productive when used for reassessment. Reframe priorities and change approach where needed. Breakthroughs often arrive after you let go of a rigid plan.",
+      "spirituality": "Surrender as practice. Contemplation reveals what action alone cannot. Let go of ego timelines and allow wisdom to arrive."
+    },
+    "meaningsReversed": {
+      "love": "Over-sacrificing or feeling taken for granted. Set boundaries and stop rescuing. Apply what you’ve learned through real change and honest conversation.",
+      "health": "Ignoring rest or clinging to a strategy that isn’t working. Adjust the plan and seek support where needed. Progress returns when you choose practical steps.",
+      "moneyCareer": "Indecision and delay can cost opportunities. Commit to a direction and ship a smaller version. Move from reflection to implementation.",
+      "spirituality": "Surrender is not passivity. Act on what you already know instead of waiting for a sign. Embodied practice matters."
+    },
+    "descriptionReversed": "Waiting becomes avoidance and creates stuckness. The lesson has been received; now it’s time to act. Choose one clear step to break inertia and reclaim momentum."
+  },
+  {
+    "id": "death",
+    "name": "Death",
+    "suit": "major",
+    "number": 13,
+    "imageAsset": "death.png",
+    "keywords": [
+      "ending",
+      "transformation",
+      "release",
+      "renewal",
+      "closure",
+      "rebirth"
+    ],
+    "meaningUpright": "ending, transformation, release, renewal, closure, rebirth",
+    "meaningReversed": "clinging, fear of change, prolonged ending, stagnation, avoidance, half-measures",
+    "description": "An ending clears space for transformation. This card is about honest closure, not punishment. Release what’s expired and you make room for renewal.",
+    "meaningsUpright": {
+      "love": "Relationship patterns must evolve. This can be rebirth through truth and change—or a clean ending when growth is impossible. Let the old dynamic die so something healthier can live.",
+      "health": "Powerful for detoxing habits and reclaiming vitality. Commit to a meaningful lifestyle shift and you’ll see real improvement. Transformation happens when you stop negotiating with what harms you.",
+      "moneyCareer": "A role, identity, or project is transforming. Cut what’s outdated and make space for the next chapter. Strategic endings often lead to stronger beginnings.",
+      "spirituality": "Initiation energy: release attachments that keep you small. Rebirth follows surrender to truth. Your next level requires letting go."
+    },
+    "meaningsReversed": {
+      "love": "Dragging out an unhealthy dynamic. Either recommit with concrete changes or let it end cleanly. Half-measures keep the wound open.",
+      "health": "Habits persist because they soothe something. Address the underlying need with healthier supports. Small consistent changes create real release.",
+      "moneyCareer": "Refusing a pivot that reality requires. Update skills, simplify, and plan the transition. Stop investing in what no longer returns value.",
+      "spirituality": "Letting go is the lesson. Practice release daily in small ways. Freedom arrives when you stop gripping an old identity."
+    },
+    "descriptionReversed": "Clinging prolongs discomfort. Avoidance can keep an ending half-alive and draining. Choose closure deliberately so the next phase can begin."
+  },
+  {
+    "id": "temperance",
+    "name": "Temperance",
+    "suit": "major",
+    "number": 14,
+    "imageAsset": "temperance.png",
+    "keywords": [
+      "balance",
+      "moderation",
+      "integration",
+      "patience",
+      "healing",
+      "harmony"
+    ],
+    "meaningUpright": "balance, moderation, integration, patience, healing, harmony",
+    "meaningReversed": "excess, imbalance, friction, impatience, overindulgence, poor boundaries",
+    "description": "Balance, patience, and integration. Mix extremes into something workable and sustainable. Slow adjustment brings lasting harmony.",
+    "meaningsUpright": {
+      "love": "Healthy compromise and emotional regulation. Work with differences rather than turning them into battles. Consistency and kindness restore closeness.",
+      "health": "Moderation is medicine. Hydration, balanced meals, and consistent movement support healing. A calm routine can be more powerful than intense effort.",
+      "moneyCareer": "Process improvement and collaboration. Build sustainable systems instead of quick fixes. Steady progress beats frantic hustle.",
+      "spirituality": "Integrate lessons into daily life. Practice steadiness and service. Simplicity clarifies the path."
+    },
+    "meaningsReversed": {
+      "love": "Communication lapses or volatility. Rebuild trust through calmer pacing and consistent behavior. Stability returns step by step.",
+      "health": "Overdoing or neglecting self-care creates swings. Choose one stabilizing habit and protect it. Your body responds to gentle consistency.",
+      "moneyCareer": "Too many priorities or chaotic workflow. Simplify scope and sequence work. Quality improves when you stop multitasking your values.",
+      "spirituality": "Practice may be sporadic or performative. Return to basics and steady devotion. Integration matters more than intensity."
+    },
+    "descriptionReversed": "Imbalance, excess, or impatience. Something is out of proportion and needs recalibration. Reduce extremes and restore structure."
+  },
+  {
+    "id": "devil",
+    "name": "The Devil",
+    "suit": "major",
+    "number": 15,
+    "imageAsset": "devil.png",
+    "keywords": [
+      "attachment",
+      "temptation",
+      "shadow",
+      "compulsion",
+      "materialism",
+      "control"
+    ],
+    "meaningUpright": "attachment, temptation, shadow, compulsion, materialism, control",
+    "meaningReversed": "release, detachment, recovery, breaking habits, liberation, clarity",
+    "description": "Attachment and shadow patterns are highlighted. The chain is often psychological: fear, shame, compulsion, or comfort that costs too much. Name the pattern and you reclaim choice.",
+    "meaningsUpright": {
+      "love": "Intense chemistry, but watch control, jealousy, or dependency. Ask whether desire is building intimacy or fueling a power loop. Boundaries keep passion from becoming a trap.",
+      "health": "Addictive coping and stress habits may surface. Replace numbing with support: sleep, therapy, movement, community. Freedom grows when you build healthier regulation.",
+      "moneyCareer": "Golden handcuffs or unhealthy incentives can appear. Examine what you’re trading for security or status. Choose values-based success over compulsive achievement.",
+      "spirituality": "Shadow work and radical honesty. Face what you avoid and the spell breaks. Compassionate accountability is the way out."
+    },
+    "meaningsReversed": {
+      "love": "Reclaim autonomy and healthier boundaries. Patterns can heal with shared accountability and truth. If coercion persists, leaving may be the liberation.",
+      "health": "Strong for recovery and habit change. Seek support systems and build new coping skills. Progress comes from repetition, not shame.",
+      "moneyCareer": "Renegotiating terms or exiting a toxic environment. Choose sustainable work and ethical incentives. Self-respect becomes your new baseline.",
+      "spirituality": "Liberation through truth and forgiveness. Release guilt-as-identity and return to clean practice. Your spirituality serves life when it’s honest."
+    },
+    "descriptionReversed": "Release and liberation become possible. You’re seeing the chain clearly and choosing differently. Small consistent changes create real freedom."
+  },
+  {
+    "id": "tower",
+    "name": "The Tower",
+    "suit": "major",
+    "number": 16,
+    "imageAsset": "tower.png",
+    "keywords": [
+      "shock",
+      "revelation",
+      "breakthrough",
+      "collapse",
+      "truth exposed",
+      "reset"
+    ],
+    "meaningUpright": "shock, revelation, breakthrough, collapse, truth exposed, reset",
+    "meaningReversed": "avoiding collapse, slow breakdown, denial, controlled change, tension, delayed truth",
+    "description": "A sudden reset breaks false structures. Upheaval is uncomfortable, but it clears deception and reveals truth. Rebuild on what’s real and you become stronger.",
+    "meaningsUpright": {
+      "love": "Truths come to the surface and the relationship must adapt. This can be a breakthrough conversation or a decisive ending. Authenticity matters more than appearances now.",
+      "health": "Warning signs demand attention. Reduce risk, manage stress, and don’t push through red flags. Stabilization and support prevent bigger crashes.",
+      "moneyCareer": "Disruption: pivots, reorganizations, revelations, or systems failing. Act quickly, protect essentials, and adapt plans. Use the chaos to rebuild smarter processes.",
+      "spirituality": "Awakening through disruption. Illusions fall so truth can stand. Rebuild faith on lived experience."
+    },
+    "meaningsReversed": {
+      "love": "Issues simmer under the surface. Address the truth directly instead of waiting for an explosion. Honest boundaries can save what’s worth saving.",
+      "health": "Chronic stress accumulates. Choose sleep, boundaries, and recovery tools. Your nervous system needs a reset, not more pressure.",
+      "moneyCareer": "Incremental disruption and fragile dependencies. Make contingency plans and simplify systems. Small reforms now reduce future chaos.",
+      "spirituality": "Release fear of change. Truth arrives gently if you listen early. Let go of ego defenses and rebuild with humility."
+    },
+    "descriptionReversed": "You feel the cracks but may be trying to avoid change. A slow breakdown suggests proactive repair is needed. Choose controlled change now to prevent larger upheaval later."
+  },
+  {
+    "id": "star",
+    "name": "The Star",
+    "suit": "major",
+    "number": 17,
+    "imageAsset": "star.png",
+    "keywords": [
+      "hope",
+      "renewal",
+      "healing",
+      "inspiration",
+      "guidance",
+      "faith"
+    ],
+    "meaningUpright": "hope, renewal, healing, inspiration, guidance, faith",
+    "meaningReversed": "discouragement, low faith, cynicism, self-doubt, drained, disconnection",
+    "description": "Hope, healing, and renewal. After difficulty, clarity returns and the future feels possible again. Take gentle steps toward your long-term vision.",
+    "meaningsUpright": {
+      "love": "Soft rebuilding and emotional openness. Healthy connections grow through patience and kindness. If you’re healing from heartbreak, warmth returns.",
+      "health": "Nervous-system calming supports recovery. Hydration, sleep, and steady routines rebuild strength. Choose gentle consistency over extremes.",
+      "moneyCareer": "Inspiration and reputation repair. Share your work and collaborate with aligned people. Optimism plus consistency brings visible progress.",
+      "spirituality": "Trust the path and follow supportive signs. Synchronicities can confirm alignment. Gratitude strengthens your connection."
+    },
+    "meaningsReversed": {
+      "love": "Fear of being hurt can close the heart. Move slowly and communicate needs clearly. Let trust rebuild through consistent actions.",
+      "health": "Low energy from stress or neglect. Return to fundamentals and seek support if needed. Your body responds well to steadiness.",
+      "moneyCareer": "Imposter feelings or lack of direction. Set achievable milestones and celebrate progress. Consistency restores confidence.",
+      "spirituality": "Return to practice and community. Faith grows from repetition, not perfection. Simple gratitude reopens the channel."
+    },
+    "descriptionReversed": "Discouragement can dim your light. Hope isn’t gone—it’s buried under fatigue or cynicism. Reconnect to small proofs and supportive environments."
+  },
+  {
+    "id": "moon",
+    "name": "The Moon",
+    "suit": "major",
+    "number": 18,
+    "imageAsset": "moon.png",
+    "keywords": [
+      "intuition",
+      "uncertainty",
+      "dreams",
+      "illusion",
+      "anxiety",
+      "hidden factors"
+    ],
+    "meaningUpright": "intuition, uncertainty, dreams, illusion, anxiety, hidden factors",
+    "meaningReversed": "clarity emerging, truth revealed, reduced fear, unmasking, release anxiety, understanding",
+    "description": "Uncertainty and hidden factors. Emotions can distort perception, so move carefully. Verify facts, but respect your gut when something feels off.",
+    "meaningsUpright": {
+      "love": "Mixed signals or emotional fog. Ask for clarity and avoid projecting stories onto silence. Trust builds when both people speak plainly.",
+      "health": "Anxiety and sleep sensitivity may increase. Support your nervous system with rest and calming routines. Track patterns—stress may be the driver.",
+      "moneyCareer": "Incomplete information and rumors. Double-check details and assumptions before committing. Patience and verification prevent mistakes.",
+      "spirituality": "Dreamwork and symbolism intensify. Let insights come, but ground them in outcomes. Discernment is the skill here."
+    },
+    "meaningsReversed": {
+      "love": "Honest conversations resolve confusion. Old insecurities can be released with clear boundaries. Trust grows when actions match words.",
+      "health": "Mood and sleep improve as stress is addressed. Consistent routines and reduced overstimulation help. Seek professional support if anxiety persists.",
+      "moneyCareer": "Plans become more concrete as misunderstandings clear. Confirm agreements in writing and proceed confidently. Less rumor, more reality.",
+      "spirituality": "Integrate intuition with logic. Distinguish fear from guidance. Grounding keeps you clear."
+    },
+    "descriptionReversed": "The fog lifts and truth emerges. What was hidden becomes understandable, reducing fear. Use clarity to make a clean decision and move forward."
+  },
+  {
+    "id": "sun",
+    "name": "The Sun",
+    "suit": "major",
+    "number": 19,
+    "imageAsset": "sun.png",
+    "keywords": [
+      "success",
+      "joy",
+      "clarity",
+      "vitality",
+      "confidence",
+      "optimism"
+    ],
+    "meaningUpright": "success, joy, clarity, vitality, confidence, optimism",
+    "meaningReversed": "overconfidence, ego, delayed success, low mood, hidden joy, burnout",
+    "description": "Joy, success, and clear outcomes. Things make sense and progress is visible. Be seen, celebrate wins, and let optimism fuel action.",
+    "meaningsUpright": {
+      "love": "Open-hearted love and mutual appreciation. Relationships thrive through honesty and play. If single, your radiance attracts healthy attention.",
+      "health": "Vitality and improved mood. Great for rebuilding fitness through movement and time outdoors. Keep hydration and recovery steady.",
+      "moneyCareer": "Recognition and momentum. Show your work, ask for what you want, and lead confidently. Success grows when you stay transparent and consistent.",
+      "spirituality": "Simple faith and gratitude. Joy is spiritual medicine. Clarity helps you trust your path."
+    },
+    "meaningsReversed": {
+      "love": "Warmth can return with honest communication. Don’t let pride prevent repair or vulnerability. Focus on daily appreciation.",
+      "health": "Watch exhaustion, dehydration, and overtraining. Recovery is the missing ingredient. Rebuild with sleep and steady routines.",
+      "moneyCareer": "Progress continues, but execution needs refinement. Avoid overconfidence and double-check details. Manage energy to prevent burnout near the finish line.",
+      "spirituality": "Reconnect to wonder through simple gratitude. Faith strengthens through daily attention. Joy is a practice, not a performance."
+    },
+    "descriptionReversed": "Good is available, but enjoyment may be blocked by fatigue or expectations. Success may be delayed or feel less satisfying. Rest, recalibrate, and let joy return gradually."
+  },
+  {
+    "id": "judgement",
+    "name": "Judgement",
+    "suit": "major",
+    "number": 20,
+    "imageAsset": "judgement.png",
+    "keywords": [
+      "awakening",
+      "reckoning",
+      "renewal",
+      "calling",
+      "forgiveness",
+      "decision"
+    ],
+    "meaningUpright": "awakening, reckoning, renewal, calling, forgiveness, decision",
+    "meaningReversed": "self-criticism, avoidance, fear of evaluation, stuck past, indecision, denial",
+    "description": "Awakening and decisive movement. Evaluate, forgive, and choose the next chapter consciously. Answer what feels like purpose, not habit.",
+    "meaningsUpright": {
+      "love": "Truth conversations and second chances. Repair is possible with accountability and forgiveness. Choose the path that honors self-respect.",
+      "health": "Time to take health seriously and follow through. Checkups and lifestyle changes are favored. Daily accountability leads to renewal.",
+      "moneyCareer": "A pivot, promotion, or calling becomes loud. Make choices aligned with mission and values. Past experience becomes a resource, not a burden.",
+      "spirituality": "A wake-up call to live authentically. Release shame and step into purpose. Your voice and path align more clearly."
+    },
+    "meaningsReversed": {
+      "love": "Old wounds resurface without repair. Seek closure through honest agreements or compassionate endings. Stop replaying the verdict—choose the next chapter.",
+      "health": "Procrastination around care. Start with one appointment or one stabilizing habit. Compassion helps you change without shame.",
+      "moneyCareer": "A necessary decision is being postponed. Fear of evaluation can keep you small. Commit to one path and let action rebuild confidence.",
+      "spirituality": "Practice self-forgiveness as devotion. Release guilt and rebuild trust with yourself. Purpose returns when you choose integrity over perfection."
+    },
+    "descriptionReversed": "Harsh self-judgment or avoidance can stall progress. The lesson is available, but you may be clinging to the past. Choose self-forgiveness and make one committed decision."
+  },
+  {
+    "id": "world",
+    "name": "The World",
+    "suit": "major",
+    "number": 21,
+    "imageAsset": "world.png",
+    "keywords": [
+      "completion",
+      "mastery",
+      "integration",
+      "travel",
+      "success",
+      "wholeness"
+    ],
+    "meaningUpright": "completion, mastery, integration, travel, success, wholeness",
+    "meaningReversed": "unfinished business, delay, lack of closure, scattered, fear of ending, stagnation",
+    "description": "Completion, mastery, and integration. A cycle ends successfully and you understand what you’ve gained. Celebrate, consolidate the lesson, and prepare for the next level.",
+    "meaningsUpright": {
+      "love": "Mature connection and healthy closure where needed. If single, you’re ready to choose well because you know yourself better. Love thrives when it honors wholeness, not dependency.",
+      "health": "Overall balance improves with consistent routines. Great time to consolidate gains and maintain. Stability is the medicine now.",
+      "moneyCareer": "Milestones, launches, and successful endings. Good for broader reach or graduating to a bigger stage. Close loops cleanly and your reputation strengthens.",
+      "spirituality": "Integration of your journey into wisdom. Teach by example through how you live. Wholeness becomes your practice."
+    },
+    "meaningsReversed": {
+      "love": "Loose ends or avoidance of a hard conversation. Seek closure, then recommit or release cleanly. Half-closure keeps the heart stuck.",
+      "health": "Inconsistency prevents full recovery. Return to basics and track progress. Maintenance is a skill—practice it.",
+      "moneyCareer": "Projects linger without delivery. Tighten scope and ship. Completion brings leverage—don’t leave value on the table.",
+      "spirituality": "Integration requires action, not more searching. Live the lesson in your routines and relationships. Wholeness grows through embodiment."
+    },
+    "descriptionReversed": "Unfinished business and lack of closure. You may be close, but avoiding the final steps. Identify the last 10% and finish it so energy can move."
+  },
+  {
+    "id": "ace_wands",
+    "name": "Ace of Wands",
+    "suit": "wands",
+    "number": 1,
+    "imageAsset": "ace_wands.png",
+    "keywords": [
+      "inspiration",
+      "initiative",
+      "courage",
+      "creative drive",
+      "ace",
+      "fire"
+    ],
+    "meaningUpright": "inspiration, initiative, courage, creative drive, ace, fire",
+    "meaningReversed": "blocked/imbalanced, inspiration, initiative, courage, creative drive, ace, fire",
+    "description": "Ace of Wands highlights a lightning-bolt idea and desire to begin. An opening appears with fresh energy and clear potential. Use momentum, leadership, and creative ignition to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes desire, attraction, initiative, and passion. It can indicate a lightning-bolt idea and desire to begin shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects energy, stamina, stress load, and pacing. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on launching, creating, leading, and taking calculated risks. Say yes to the first step; momentum follows movement. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to faith-in-action, purpose, and inspired devotion. Let inspiration, ambition, creativity, courage, and spiritual drive become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show impulsiveness, burnout, scattered effort, and ego-driven action affecting desire, attraction, initiative, and passion. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Clear obstacles and recommit to the first step. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Ace of Wands can point to spark without follow-through or risky impatience. The spark is present, but blocked by doubt, delay, or scattered attention. Recalibrate: release impulsiveness, burnout, scattered effort, and ego-driven action and return to one grounded plan."
+  },
+  {
+    "id": "two_wands",
+    "name": "Two of Wands",
+    "suit": "wands",
+    "number": 2,
+    "imageAsset": "two_wands.png",
+    "keywords": [
+      "inspiration",
+      "initiative",
+      "courage",
+      "creative drive",
+      "two",
+      "fire"
+    ],
+    "meaningUpright": "inspiration, initiative, courage, creative drive, two, fire",
+    "meaningReversed": "blocked/imbalanced, inspiration, initiative, courage, creative drive, two, fire",
+    "description": "Two of Wands highlights planning, vision, and the first map. You’re coordinating forces: desire vs reality, self vs other, vision vs logistics. Use momentum, leadership, and creative ignition to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes desire, attraction, initiative, and passion. It can indicate planning, vision, and the first map shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects energy, stamina, stress load, and pacing. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on launching, creating, leading, and taking calculated risks. Choose alignment over indecision. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to faith-in-action, purpose, and inspired devotion. Let inspiration, ambition, creativity, courage, and spiritual drive become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show impulsiveness, burnout, scattered effort, and ego-driven action affecting desire, attraction, initiative, and passion. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Make a choice and stop feeding ambiguity. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Two of Wands can point to fear of the future or refusing to choose. Indecision or imbalance creates friction. Recalibrate: release impulsiveness, burnout, scattered effort, and ego-driven action and return to one grounded plan."
+  },
+  {
+    "id": "three_wands",
+    "name": "Three of Wands",
+    "suit": "wands",
+    "number": 3,
+    "imageAsset": "three_wands.png",
+    "keywords": [
+      "inspiration",
+      "initiative",
+      "courage",
+      "creative drive",
+      "three",
+      "fire"
+    ],
+    "meaningUpright": "inspiration, initiative, courage, creative drive, three, fire",
+    "meaningReversed": "blocked/imbalanced, inspiration, initiative, courage, creative drive, three, fire",
+    "description": "Three of Wands highlights expansion and sending your work outward. Growth becomes visible and support systems matter. Use momentum, leadership, and creative ignition to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes desire, attraction, initiative, and passion. It can indicate expansion and sending your work outward shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects energy, stamina, stress load, and pacing. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on launching, creating, leading, and taking calculated risks. Collaboration and feedback accelerate progress. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to faith-in-action, purpose, and inspired devotion. Let inspiration, ambition, creativity, courage, and spiritual drive become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show impulsiveness, burnout, scattered effort, and ego-driven action affecting desire, attraction, initiative, and passion. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Rebuild collaboration and clarify expectations. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Three of Wands can point to delays, setbacks, or poor coordination. Growth is slowed by misalignment or lack of support. Recalibrate: release impulsiveness, burnout, scattered effort, and ego-driven action and return to one grounded plan."
+  },
+  {
+    "id": "ace_cups",
+    "name": "Ace of Cups",
+    "suit": "cups",
+    "number": 1,
+    "imageAsset": "ace_cups.png",
+    "keywords": [
+      "emotion",
+      "connection",
+      "intuition",
+      "compassion",
+      "ace",
+      "water"
+    ],
+    "meaningUpright": "emotion, connection, intuition, compassion, ace, water",
+    "meaningReversed": "blocked/imbalanced, emotion, connection, intuition, compassion, ace, water",
+    "description": "Ace of Cups highlights an open heart and emotional renewal. An opening appears with fresh energy and clear potential. Use emotional intelligence, bonding, and healing to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes feelings, intimacy, trust, and vulnerability. It can indicate an open heart and emotional renewal shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects hydration, sleep, mood regulation, and sensitivity. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on relationships at work, creativity, and values-driven decisions. Say yes to the first step; momentum follows movement. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to intuition, receptivity, and heart-centered practice. Let emotion, connection, compassion, intuition, and inner life become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show avoidance, moodiness, overattachment, and escapism affecting feelings, intimacy, trust, and vulnerability. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Clear obstacles and recommit to the first step. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Ace of Cups can point to blocked feelings or fear of vulnerability. The spark is present, but blocked by doubt, delay, or scattered attention. Recalibrate: release avoidance, moodiness, overattachment, and escapism and return to one grounded plan."
+  },
+  {
+    "id": "two_cups",
+    "name": "Two of Cups",
+    "suit": "cups",
+    "number": 2,
+    "imageAsset": "two_cups.png",
+    "keywords": [
+      "emotion",
+      "connection",
+      "intuition",
+      "compassion",
+      "two",
+      "water"
+    ],
+    "meaningUpright": "emotion, connection, intuition, compassion, two, water",
+    "meaningReversed": "blocked/imbalanced, emotion, connection, intuition, compassion, two, water",
+    "description": "Two of Cups highlights connection and mutual choice. You’re coordinating forces: desire vs reality, self vs other, vision vs logistics. Use emotional intelligence, bonding, and healing to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes feelings, intimacy, trust, and vulnerability. It can indicate connection and mutual choice shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects hydration, sleep, mood regulation, and sensitivity. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on relationships at work, creativity, and values-driven decisions. Choose alignment over indecision. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to intuition, receptivity, and heart-centered practice. Let emotion, connection, compassion, intuition, and inner life become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show avoidance, moodiness, overattachment, and escapism affecting feelings, intimacy, trust, and vulnerability. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Make a choice and stop feeding ambiguity. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Two of Cups can point to misalignment or uneven effort. Indecision or imbalance creates friction. Recalibrate: release avoidance, moodiness, overattachment, and escapism and return to one grounded plan."
+  },
+  {
+    "id": "three_cups",
+    "name": "Three of Cups",
+    "suit": "cups",
+    "number": 3,
+    "imageAsset": "three_cups.png",
+    "keywords": [
+      "emotion",
+      "connection",
+      "intuition",
+      "compassion",
+      "three",
+      "water"
+    ],
+    "meaningUpright": "emotion, connection, intuition, compassion, three, water",
+    "meaningReversed": "blocked/imbalanced, emotion, connection, intuition, compassion, three, water",
+    "description": "Three of Cups highlights friendship, celebration, and support. Growth becomes visible and support systems matter. Use emotional intelligence, bonding, and healing to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes feelings, intimacy, trust, and vulnerability. It can indicate friendship, celebration, and support shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects hydration, sleep, mood regulation, and sensitivity. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on relationships at work, creativity, and values-driven decisions. Collaboration and feedback accelerate progress. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to intuition, receptivity, and heart-centered practice. Let emotion, connection, compassion, intuition, and inner life become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show avoidance, moodiness, overattachment, and escapism affecting feelings, intimacy, trust, and vulnerability. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Rebuild collaboration and clarify expectations. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Three of Cups can point to overindulgence or social drama. Growth is slowed by misalignment or lack of support. Recalibrate: release avoidance, moodiness, overattachment, and escapism and return to one grounded plan."
+  },
+  {
+    "id": "ace_swords",
+    "name": "Ace of Swords",
+    "suit": "swords",
+    "number": 1,
+    "imageAsset": "ace_swords.png",
+    "keywords": [
+      "truth",
+      "communication",
+      "analysis",
+      "decision",
+      "ace",
+      "air"
+    ],
+    "meaningUpright": "truth, communication, analysis, decision, ace, air",
+    "meaningReversed": "blocked/imbalanced, truth, communication, analysis, decision, ace, air",
+    "description": "Ace of Swords highlights a breakthrough in clarity and truth. An opening appears with fresh energy and clear potential. Use clarity, strategy, and honest communication to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes communication, boundaries, truth, and perspective. It can indicate a breakthrough in clarity and truth shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects nervous-system stress, tension, and sleep quality. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on analysis, negotiation, conflict resolution, and planning. Say yes to the first step; momentum follows movement. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to discernment, truth-seeking, and mental discipline. Let mind, truth, communication, conflict, and decision-making become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show overthinking, anxiety, harshness, and mental overload affecting communication, boundaries, truth, and perspective. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Clear obstacles and recommit to the first step. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Ace of Swords can point to confusion, misinformation, or harshness. The spark is present, but blocked by doubt, delay, or scattered attention. Recalibrate: release overthinking, anxiety, harshness, and mental overload and return to one grounded plan."
+  },
+  {
+    "id": "two_swords",
+    "name": "Two of Swords",
+    "suit": "swords",
+    "number": 2,
+    "imageAsset": "two_swords.png",
+    "keywords": [
+      "truth",
+      "communication",
+      "analysis",
+      "decision",
+      "two",
+      "air"
+    ],
+    "meaningUpright": "truth, communication, analysis, decision, two, air",
+    "meaningReversed": "blocked/imbalanced, truth, communication, analysis, decision, two, air",
+    "description": "Two of Swords highlights a stalemate and difficult choice. You’re coordinating forces: desire vs reality, self vs other, vision vs logistics. Use clarity, strategy, and honest communication to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes communication, boundaries, truth, and perspective. It can indicate a stalemate and difficult choice shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects nervous-system stress, tension, and sleep quality. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on analysis, negotiation, conflict resolution, and planning. Choose alignment over indecision. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to discernment, truth-seeking, and mental discipline. Let mind, truth, communication, conflict, and decision-making become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show overthinking, anxiety, harshness, and mental overload affecting communication, boundaries, truth, and perspective. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Make a choice and stop feeding ambiguity. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Two of Swords can point to indecision breaks or truth surfaces. Indecision or imbalance creates friction. Recalibrate: release overthinking, anxiety, harshness, and mental overload and return to one grounded plan."
+  },
+  {
+    "id": "three_swords",
+    "name": "Three of Swords",
+    "suit": "swords",
+    "number": 3,
+    "imageAsset": "three_swords.png",
+    "keywords": [
+      "truth",
+      "communication",
+      "analysis",
+      "decision",
+      "three",
+      "air"
+    ],
+    "meaningUpright": "truth, communication, analysis, decision, three, air",
+    "meaningReversed": "blocked/imbalanced, truth, communication, analysis, decision, three, air",
+    "description": "Three of Swords highlights heartache and honest grief. Growth becomes visible and support systems matter. Use clarity, strategy, and honest communication to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes communication, boundaries, truth, and perspective. It can indicate heartache and honest grief shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects nervous-system stress, tension, and sleep quality. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on analysis, negotiation, conflict resolution, and planning. Collaboration and feedback accelerate progress. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to discernment, truth-seeking, and mental discipline. Let mind, truth, communication, conflict, and decision-making become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show overthinking, anxiety, harshness, and mental overload affecting communication, boundaries, truth, and perspective. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Rebuild collaboration and clarify expectations. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Three of Swords can point to healing, forgiveness, and release. Growth is slowed by misalignment or lack of support. Recalibrate: release overthinking, anxiety, harshness, and mental overload and return to one grounded plan."
+  },
+  {
+    "id": "ace_pentacles",
+    "name": "Ace of Pentacles",
+    "suit": "pentacles",
+    "number": 1,
+    "imageAsset": "ace_pentacles.png",
+    "keywords": [
+      "work",
+      "money",
+      "body",
+      "stability",
+      "ace",
+      "earth"
+    ],
+    "meaningUpright": "work, money, body, stability, ace, earth",
+    "meaningReversed": "blocked/imbalanced, work, money, body, stability, ace, earth",
+    "description": "Ace of Pentacles highlights a tangible opportunity and new resource. An opening appears with fresh energy and clear potential. Use building, saving, growing, and creating security to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes commitment, reliability, shared plans, and tangible care. It can indicate a tangible opportunity and new resource shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects nutrition, strength, routine, and the physical body. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on execution, finances, systems, and tangible outcomes. Say yes to the first step; momentum follows movement. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to grounding, gratitude, and spirituality in daily life. Let work, money, body, stability, and practical resources become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show scarcity, stagnation, material fixation, and fear of change affecting commitment, reliability, shared plans, and tangible care. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Clear obstacles and recommit to the first step. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Ace of Pentacles can point to missed chance or fear-based spending. The spark is present, but blocked by doubt, delay, or scattered attention. Recalibrate: release scarcity, stagnation, material fixation, and fear of change and return to one grounded plan."
+  },
+  {
+    "id": "two_pentacles",
+    "name": "Two of Pentacles",
+    "suit": "pentacles",
+    "number": 2,
+    "imageAsset": "two_pentacles.png",
+    "keywords": [
+      "work",
+      "money",
+      "body",
+      "stability",
+      "two",
+      "earth"
+    ],
+    "meaningUpright": "work, money, body, stability, two, earth",
+    "meaningReversed": "blocked/imbalanced, work, money, body, stability, two, earth",
+    "description": "Two of Pentacles highlights balancing resources and priorities. You’re coordinating forces: desire vs reality, self vs other, vision vs logistics. Use building, saving, growing, and creating security to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes commitment, reliability, shared plans, and tangible care. It can indicate balancing resources and priorities shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects nutrition, strength, routine, and the physical body. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on execution, finances, systems, and tangible outcomes. Choose alignment over indecision. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to grounding, gratitude, and spirituality in daily life. Let work, money, body, stability, and practical resources become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show scarcity, stagnation, material fixation, and fear of change affecting commitment, reliability, shared plans, and tangible care. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Make a choice and stop feeding ambiguity. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Two of Pentacles can point to overwhelm or financial chaos. Indecision or imbalance creates friction. Recalibrate: release scarcity, stagnation, material fixation, and fear of change and return to one grounded plan."
+  },
+  {
+    "id": "three_pentacles",
+    "name": "Three of Pentacles",
+    "suit": "pentacles",
+    "number": 3,
+    "imageAsset": "three_pentacles.png",
+    "keywords": [
+      "work",
+      "money",
+      "body",
+      "stability",
+      "three",
+      "earth"
+    ],
+    "meaningUpright": "work, money, body, stability, three, earth",
+    "meaningReversed": "blocked/imbalanced, work, money, body, stability, three, earth",
+    "description": "Three of Pentacles highlights skill, teamwork, and building craft. Growth becomes visible and support systems matter. Use building, saving, growing, and creating security to move the situation forward without losing balance.",
+    "meaningsUpright": {
+      "love": "In love, this emphasizes commitment, reliability, shared plans, and tangible care. It can indicate skill, teamwork, and building craft shaping your feelings and choices. Choose direct communication and let your actions match your intentions.",
+      "health": "Health reflects nutrition, strength, routine, and the physical body. Support your body with consistent basics and reduce stressors that undermine recovery. Progress is best measured by steady trend, not daily fluctuations.",
+      "moneyCareer": "For work and money, focus on execution, finances, systems, and tangible outcomes. Collaboration and feedback accelerate progress. Take one practical next step—then evaluate and adjust rather than overthinking.",
+      "spirituality": "Spiritually, this speaks to grounding, gratitude, and spirituality in daily life. Let work, money, body, stability, and practical resources become lived practice in how you choose, speak, and serve. A small daily ritual will deepen the message more than a single intense session."
+    },
+    "meaningsReversed": {
+      "love": "In relationships, the reversal can show scarcity, stagnation, material fixation, and fear of change affecting commitment, reliability, shared plans, and tangible care. Notice where fear, avoidance, or reactivity is steering the connection. Repair through boundaries, honesty, and calmer pacing.",
+      "health": "Health may reflect stress, inconsistency, or overextension. Choose recovery fundamentals first—sleep, hydration, movement, and support. If symptoms persist, seek professional guidance rather than guessing.",
+      "moneyCareer": "For career and finances, avoid shortcuts and clarify terms. Rebuild collaboration and clarify expectations. Reduce noise, tighten execution, and rebuild credibility through consistent delivery.",
+      "spirituality": "Spiritually, reversals often indicate an imbalance or internalization of the lesson. Practice discernment: what is guidance vs what is fear. When you simplify, the signal becomes clear."
+    },
+    "descriptionReversed": "Reversed, Three of Pentacles can point to poor quality or lack of collaboration. Growth is slowed by misalignment or lack of support. Recalibrate: release scarcity, stagnation, material fixation, and fear of change and return to one grounded plan."
+  }
+]

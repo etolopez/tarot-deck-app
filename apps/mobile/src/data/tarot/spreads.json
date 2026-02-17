@@ -1,0 +1,100 @@
+[
+  {
+    "id": "one_card",
+    "displayName": "Single Card Reading",
+    "description": "One card for quick daily guidance or a focused question. Best for a clear, direct message.",
+    "cardCount": 1,
+    "creditCost": 1,
+    "positions": [
+      {
+        "index": 0,
+        "label": "Guidance",
+        "prompt": "This card represents guidance and insight for the present moment. What message does this card bring for reflection?"
+      }
+    ]
+  },
+  {
+    "id": "three_card",
+    "displayName": "Past, Present, Future",
+    "description": "Three cards for past influences, current situation, and possible outcomes. Ideal for understanding a situation over time.",
+    "cardCount": 3,
+    "creditCost": 2,
+    "positions": [
+      {
+        "index": 0,
+        "label": "Past",
+        "prompt": "This card represents influences from the past that have shaped the current situation. What lessons or patterns from the past are relevant?"
+      },
+      {
+        "index": 1,
+        "label": "Present",
+        "prompt": "This card represents the current situation and what is happening now. What is the present moment revealing?"
+      },
+      {
+        "index": 2,
+        "label": "Future",
+        "prompt": "This card represents potential outcomes and future possibilities. What direction might things be heading?"
+      }
+    ]
+  },
+  {
+    "id": "celtic_cross",
+    "displayName": "Celtic Cross",
+    "description": "Ten cards in the classic layout for a deep, full reading. Best for complex questions or when you want detailed insight.",
+    "cardCount": 10,
+    "creditCost": 5,
+    "positions": [
+      {
+        "index": 0,
+        "label": "Present",
+        "prompt": "This card represents the current situation and what is happening now."
+      },
+      {
+        "index": 1,
+        "label": "Challenge",
+        "prompt": "This card represents the immediate challenge or obstacle you are facing."
+      },
+      {
+        "index": 2,
+        "label": "Past",
+        "prompt": "This card represents influences from the past that have shaped the current situation."
+      },
+      {
+        "index": 3,
+        "label": "Future",
+        "prompt": "This card represents potential outcomes and future possibilities."
+      },
+      {
+        "index": 4,
+        "label": "Above",
+        "prompt": "This card represents your goals, aspirations, or what you are aiming for."
+      },
+      {
+        "index": 5,
+        "label": "Below",
+        "prompt": "This card represents your subconscious influences or what lies beneath the surface."
+      },
+      {
+        "index": 6,
+        "label": "Advice",
+        "prompt": "This card represents advice or guidance on how to proceed."
+      },
+      {
+        "index": 7,
+        "label": "External",
+        "prompt": "This card represents external influences or how others perceive the situation."
+      },
+      {
+        "index": 8,
+        "label": "Hopes",
+        "prompt": "This card represents your hopes and fears regarding the situation."
+      },
+      {
+        "index": 9,
+        "label": "Outcome",
+        "prompt": "This card represents the potential outcome or resolution of the situation."
+      }
+    ]
+  }
+]
+

@@ -1,0 +1,1121 @@
+/**
+ * Reading Screen - Card drawing and reveal
+ * Beautiful animations: shuffling, card flips, and dreamy transitions
+ */
+
+import { useEffect, useState, useRef } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Animated,
+  Image,
+  Modal,
+  Dimensions,
+  Easing,
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
+import { useReadingStore } from "../state/readingStore";
+import { consumeCredits, getCurrentAccountId } from "../services/creditsService";
+import {
+  createReadingDraft,
+  drawCards,
+  buildLocalResult,
+} from "../core/tarotEngine";
+import { getAllCards, getSpread, getCard } from "../data/tarot/loader";
+import { logger } from "../core/logger";
+import { getCardImagePath, getCardBackImagePath } from "../utils/cardImageMapper";
+import { getCardImageSource } from "../utils/cardImageMap";
+import type { DrawnCard } from "../types/tarot";
+
+const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
+
+export default function ReadingScreen() {
+  const router = useRouter();
+  const {
+    selectedSpreadId,
+    question,
+    setReadingState,
+    setCurrentReading,
+  } = useReadingStore();
+
+  const [drawnCards, setDrawnCards] = useState<DrawnCard[]>([]);
+  const [revealedCards, setRevealedCards] = useState<Set<number>>(new Set());
+  const [loading, setLoading] = useState(false);
+  const [shuffling, setShuffling] = useState(true);
+  const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
+  
+  // Animation values
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const shuffleCards = useRef<Animated.Value[]>([]).current;
+  const cardFlipAnims = useRef<Map<number, Animated.Value>>(new Map()).current;
+  const cardScaleAnims = useRef<Map<number, Animated.Value>>(new Map()).current;
+  const cardPositionAnims = useRef<Map<number, Animated.ValueXY>>(new Map()).current;
+  const hasDealtCards = useRef(false);
+
+  useEffect(() => {
+    if (!selectedSpreadId) {
+      router.replace("/");
+      return;
+    }
+
+    const performReading = async () => {
+      try {
+        setLoading(true);
+        setShuffling(true);
+
+        const spread = getSpread(selectedSpreadId);
+        const cards = getAllCards();
+
+        // Create reading draft
+        const draft = createReadingDraft(
+          {
+            spreadId: selectedSpreadId,
+            question,
+            allowReversals: true, // Allow reversed cards
+          },
+          spread
+        );
+
+        // Consume credits
+        const accountId = await getCurrentAccountId();
+        await consumeCredits(spread.creditCost, draft.readingId, accountId || undefined);
+
+        // Draw cards (allow reversals)
+        const drawn = drawCards(spread, cards, true);
+        setDrawnCards(drawn);
+
+        // Initialize animation values for drawn cards
+        drawn.forEach((_, index) => {
+          if (!cardFlipAnims.has(index)) {
+            cardFlipAnims.set(index, new Animated.Value(0));
+          }
+          if (!cardScaleAnims.has(index)) {
+            cardScaleAnims.set(index, new Animated.Value(0));
+          }
+          if (!cardPositionAnims.has(index)) {
+            cardPositionAnims.set(index, new Animated.ValueXY({ 
+              x: SCREEN_WIDTH / 2 - 60, 
+              y: SCREEN_HEIGHT / 2 - 90 
+            }));
+          }
+        });
+
+        // Create shuffling cards animation
+        const shuffleCardCount = 20;
+        for (let i = 0; i < shuffleCardCount; i++) {
+          shuffleCards[i] = new Animated.Value(0);
+        }
+
+        // Start shuffling animation
+        startShufflingAnimation(shuffleCardCount);
+
+        // Wait for shuffle animation
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        setShuffling(false);
+
+        // Build result
+        const cardIndex = new Map(cards.map((c) => [c.id, c]));
+        const result = buildLocalResult(
+          draft.readingId,
+          spread,
+          question,
+          drawn,
+          cardIndex
+        );
+
+        // Set reading result (AI narrative removed for simplicity)
+        setCurrentReading(result);
+        setReadingState("RESULT");
+
+        // Animate cards into position
+        animateCardsIntoPosition(drawn.length);
+        hasDealtCards.current = true;
+
+        // Fade in content
+        Animated.timing(fadeAnim, {
+          toValue: 1,
+          duration: 800,
+          easing: Easing.out(Easing.cubic),
+          useNativeDriver: true,
+        }).start();
+
+        logger.info("ui.reading.complete", { readingId: result.readingId });
+      } catch (error) {
+        logger.error("reading.perform.error", {
+          error: error instanceof Error ? error.message : String(error),
+        });
+        router.replace("/");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    performReading();
+  }, []);
+
+  /**
+   * Create shuffling animation with cards moving around
+   */
+  const startShufflingAnimation = (cardCount: number) => {
+    const animations = shuffleCards.slice(0, cardCount).map((anim, index) => {
+      const startX = Math.random() * SCREEN_WIDTH;
+      const startY = Math.random() * SCREEN_HEIGHT;
+      const endX = Math.random() * SCREEN_WIDTH;
+      const endY = Math.random() * SCREEN_HEIGHT;
+      const rotation = Math.random() * 360;
+
+      return Animated.loop(
+        Animated.sequence([
+          Animated.parallel([
+            Animated.timing(anim, {
+              toValue: 1,
+              duration: 1000 + Math.random() * 500,
+              easing: Easing.inOut(Easing.ease),
+              useNativeDriver: true,
+            }),
+            Animated.timing(
+              new Animated.Value(startX),
+              {
+                toValue: endX,
+                duration: 1000 + Math.random() * 500,
+                easing: Easing.inOut(Easing.ease),
+                useNativeDriver: true,
+              }
+            ),
+          ]),
+          Animated.timing(anim, {
+            toValue: 0,
+            duration: 1000 + Math.random() * 500,
+            easing: Easing.inOut(Easing.ease),
+            useNativeDriver: true,
+          }),
+        ])
+      );
+    });
+
+    Animated.parallel(animations).start();
+  };
+
+  /**
+   * Animate cards flying into their positions
+   */
+  const animateCardsIntoPosition = (cardCount: number) => {
+    const positions = calculateCardPositions(cardCount, selectedSpreadId);
+    
+    positions.forEach((pos, index) => {
+      const scaleAnim = cardScaleAnims.get(index);
+      const posAnim = cardPositionAnims.get(index);
+      
+      if (scaleAnim && posAnim) {
+        // For Celtic Cross, stagger the animations slightly for a more dramatic effect
+        const delay = selectedSpreadId === "celtic_cross" ? index * 100 : 0;
+        
+        Animated.parallel([
+          Animated.spring(scaleAnim, {
+            toValue: 1,
+            tension: 50,
+            friction: 7,
+            useNativeDriver: true,
+            delay,
+          }),
+          Animated.spring(posAnim, {
+            toValue: { x: pos.x, y: pos.y },
+            tension: 50,
+            friction: 7,
+            useNativeDriver: true,
+            delay,
+          }),
+        ]).start();
+      }
+    });
+  };
+
+  /**
+   * Calculate Celtic Cross layout positions
+   * Traditional cross pattern with vertical line on the right
+   * SIMPLIFIED: Everything centered in available space
+   */
+  const calculateCelticCrossPositions = () => {
+    const headerHeight = 16; // minimal top offset
+    const cardWidth = 75;
+    const cardHeight = 112;
+    const spacing = 12;
+    const cols = 3;
+    const rows = 4; // will use 10 slots out of 12
+
+    const totalWidth = cols * cardWidth + (cols - 1) * spacing;
+    const startX = (SCREEN_WIDTH - totalWidth) / 2;
+
+    const startY = headerHeight + 8; // sit close to the button
+
+    const positions = [];
+    for (let i = 0; i < 10; i++) {
+      const row = Math.floor(i / cols);
+      const col = i % cols;
+      positions[i] = {
+        x: startX + col * (cardWidth + spacing),
+        y: startY + row * (cardHeight + spacing),
+      };
+    }
+    return positions;
+  };
+
+  /**
+   * Calculate accordion/fan style positions for 3-card spread
+   * Cards are arranged side by side with slight vertical offset (fan/accordion effect)
+   * SIMPLIFIED: Everything centered in available space
+   */
+  /**
+   * Calculate vertical 3-card spread positions
+   * Cards stacked one on top of the other, anchored just below header/button
+   */
+  const calculateThreeCardAccordionPositions = () => {
+    const headerHeight = 40; // minimal block for title/subtitle/button
+    const topGap = 0; // no gap below the button
+    const cardWidth = 110;
+    const cardHeight = 160;
+    const verticalSpacing = 8;
+    
+    const startY = headerHeight + topGap;
+    const centerX = (SCREEN_WIDTH - cardWidth) / 2;
+    
+    const positions = [];
+    positions[0] = { x: centerX, y: startY };
+    positions[1] = { x: centerX, y: startY + cardHeight + verticalSpacing };
+    positions[2] = { x: centerX, y: startY + (cardHeight + verticalSpacing) * 2 };
+    return positions;
+  };
+
+  /**
+   * Calculate card positions in a grid
+   * Single card is larger and centered
+   * Celtic Cross uses special traditional layout
+   * 3-card spread uses accordion/fan style layout
+   * Cards are positioned relative to the cardsContainer (which is flex: 1)
+   */
+  const calculateCardPositions = (count: number, spreadId?: string) => {
+    // Celtic Cross: use traditional cross layout
+    if (spreadId === "celtic_cross" && count === 10) {
+      return calculateCelticCrossPositions();
+    }
+    
+    // 3-card spread: use accordion/fan style layout
+    if (spreadId === "three_card" && count === 3) {
+      return calculateThreeCardAccordionPositions();
+    }
+    
+    // Single card: make it bigger and perfectly centered on screen
+    if (count === 1) {
+      const aspectRatio = 2 / 3; // Card aspect ratio
+      const maxWidth = SCREEN_WIDTH * 0.88;
+      const maxHeight = SCREEN_HEIGHT * 0.8;
+
+      let cardWidth = Math.min(220, maxWidth);
+      let cardHeight = cardWidth / aspectRatio;
+
+      if (cardHeight > maxHeight) {
+        cardHeight = maxHeight;
+        cardWidth = cardHeight * aspectRatio;
+      }
+
+      return [
+        {
+          x: (SCREEN_WIDTH - cardWidth) / 2,
+          y: (SCREEN_HEIGHT - cardHeight) / 2,
+        },
+      ];
+    }
+
+    // Multiple cards: use grid layout, ensure cards fit on screen
+    const headerHeight = 100;
+    const availableHeight = SCREEN_HEIGHT - headerHeight;
+    const cardsPerRow = Math.ceil(Math.sqrt(count));
+    const totalRows = Math.ceil(count / cardsPerRow);
+    
+    // Calculate card size to fit screen
+    const maxTotalWidth = SCREEN_WIDTH * 0.9;
+    const spacing = 12;
+    const maxCardWidth = (maxTotalWidth - spacing * (cardsPerRow - 1)) / cardsPerRow;
+    const aspectRatio = 2 / 3;
+    
+    let cardWidth = Math.min(110, maxCardWidth);
+    let cardHeight = cardWidth / aspectRatio;
+    
+    // Ensure cards fit vertically
+    const maxTotalHeight = availableHeight * 0.85;
+    const calculatedHeight = totalRows * cardHeight + spacing * (totalRows - 1);
+    if (calculatedHeight > maxTotalHeight) {
+      cardHeight = (maxTotalHeight - spacing * (totalRows - 1)) / totalRows;
+      cardWidth = cardHeight * aspectRatio;
+    }
+    
+    // Calculate total dimensions
+    const totalWidth = cardsPerRow * cardWidth + (cardsPerRow - 1) * spacing;
+    const totalHeight = totalRows * cardHeight + (totalRows - 1) * spacing;
+    
+    // Center everything: horizontally and vertically in available space
+    const startX = (SCREEN_WIDTH - totalWidth) / 2;
+    const startY = headerHeight + (availableHeight - totalHeight) / 2;
+    
+    const positions = [];
+
+    for (let i = 0; i < count; i++) {
+      const row = Math.floor(i / cardsPerRow);
+      const col = i % cardsPerRow;
+      positions.push({
+        x: startX + col * (cardWidth + spacing),
+        y: startY + row * (cardHeight + spacing),
+      });
+    }
+
+    return positions;
+  };
+
+  /**
+   * Handle card reveal with flip animation
+   * Card reveals in the direction it will appear in the reading (reversed if needed)
+   */
+  const handleRevealCard = (index: number) => {
+    const scaleAnim = cardScaleAnims.get(index);
+    const flipAnim = cardFlipAnims.get(index);
+    
+    if (!scaleAnim || !flipAnim) return;
+
+    const drawnCard = drawnCards[index];
+    const isReversed = drawnCard?.isReversed || false;
+
+    // Create flip animation sequence
+    Animated.sequence([
+      // Scale up and start flip
+      Animated.parallel([
+        Animated.timing(scaleAnim, {
+          toValue: 1.15,
+          duration: 200,
+          easing: Easing.out(Easing.ease),
+          useNativeDriver: true,
+        }),
+        Animated.timing(flipAnim, {
+          toValue: 1,
+          duration: 600,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: true,
+        }),
+      ]),
+      // Scale back down
+      Animated.timing(scaleAnim, {
+        toValue: 1,
+        duration: 200,
+        easing: Easing.in(Easing.ease),
+        useNativeDriver: true,
+      }),
+    ]).start(() => {
+      // Update revealed state after animation
+      const newRevealed = new Set([...revealedCards, index]);
+      setRevealedCards(newRevealed);
+      setSelectedCardIndex(index);
+
+      // Don't auto-navigate - let user click button
+    });
+  };
+
+  /**
+   * Animate cards dropping into background before navigating
+   */
+  const animateCardsToResults = () => {
+    const animations = drawnCards.map((_, index) => {
+      const posAnim = cardPositionAnims.get(index);
+      const scaleAnim = cardScaleAnims.get(index);
+      
+      if (!posAnim || !scaleAnim) return null;
+
+      return Animated.parallel([
+        Animated.timing(posAnim, {
+          toValue: { 
+            x: SCREEN_WIDTH / 2 - 60, 
+            y: SCREEN_HEIGHT + 100 
+          },
+          duration: 800,
+          easing: Easing.in(Easing.back(1.2)),
+          useNativeDriver: true,
+        }),
+        Animated.timing(scaleAnim, {
+          toValue: 0.3,
+          duration: 800,
+          easing: Easing.in(Easing.ease),
+          useNativeDriver: true,
+        }),
+      ]);
+    }).filter(Boolean);
+
+    Animated.parallel(animations as Animated.CompositeAnimation[]).start(() => {
+      router.replace("/result");
+    });
+  };
+
+  const handleCloseFullScreen = () => {
+    setSelectedCardIndex(null);
+  };
+
+  const handleViewResults = () => {
+    animateCardsToResults();
+  };
+
+  /**
+   * Render shuffling animation
+   */
+  const renderShufflingAnimation = () => {
+    return (
+      <View style={styles.shufflingContainer}>
+        {shuffleCards.slice(0, 20).map((anim, index) => {
+          const rotate = anim.interpolate({
+            inputRange: [0, 1],
+            outputRange: ['0deg', '360deg'],
+          });
+
+          const translateX = anim.interpolate({
+            inputRange: [0, 1],
+            outputRange: [
+              Math.random() * SCREEN_WIDTH,
+              Math.random() * SCREEN_WIDTH,
+            ],
+          });
+
+          const translateY = anim.interpolate({
+            inputRange: [0, 1],
+            outputRange: [
+              Math.random() * SCREEN_HEIGHT,
+              Math.random() * SCREEN_HEIGHT,
+            ],
+          });
+
+          const opacity = anim.interpolate({
+            inputRange: [0, 0.5, 1],
+            outputRange: [0.3, 0.8, 0.3],
+          });
+
+          return (
+            <Animated.View
+              key={index}
+              style={[
+                styles.shufflingCard,
+                {
+                  transform: [
+                    { translateX },
+                    { translateY },
+                    { rotate },
+                  ],
+                  opacity,
+                },
+              ]}
+            >
+              <Image
+                source={getCardImageSource(getCardBackImagePath())}
+                style={styles.shufflingCardImage}
+                resizeMode="contain"
+              />
+            </Animated.View>
+          );
+        })}
+        <View style={styles.shufflingTextContainer}>
+          <Text style={styles.shufflingText}>Shuffling the cards...</Text>
+          <Text style={styles.shufflingSubtext}>The universe is aligning</Text>
+        </View>
+      </View>
+    );
+  };
+
+  if (shuffling || loading) {
+    return (
+      <LinearGradient
+        colors={['#1a0033', '#2d1b4e', '#1a0033']}
+        style={styles.container}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+      >
+        <SafeAreaView style={styles.container}>
+          {renderShufflingAnimation()}
+        </SafeAreaView>
+      </LinearGradient>
+    );
+  }
+
+  return (
+    <LinearGradient
+      colors={['#1a0033', '#2d1b4e', '#4a1a6e', '#6a4c93', '#8b6faf', '#1a0033']}
+      style={styles.container}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+    >
+      <SafeAreaView style={styles.container}>
+        <Animated.View
+          style={[styles.content, { opacity: fadeAnim }]}
+        >
+          <Text style={styles.title}>Your Cards</Text>
+          <Text style={styles.subtitle}>
+            {revealedCards.size === drawnCards.length 
+              ? "All cards revealed ✨" 
+              : `Reveal in order (${revealedCards.size}/${drawnCards.length})`}
+          </Text>
+          
+          {/* Reveal in order button */}
+          {drawnCards.length > 0 && (
+            <TouchableOpacity
+              style={styles.viewResultsButton}
+              onPress={() => {
+                const nextIndex = revealedCards.size;
+                if (nextIndex < drawnCards.length) {
+                  handleRevealCard(nextIndex);
+                } else {
+                  handleViewResults();
+                }
+              }}
+              activeOpacity={0.8}
+            >
+              <LinearGradient
+                colors={['#6a4c93', '#8b6faf', '#6a4c93']}
+                style={styles.buttonGradient}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 0 }}
+              >
+                <Text style={styles.viewResultsButtonText}>
+                  {revealedCards.size === 0
+                    ? "Reveal first card"
+                    : revealedCards.size < drawnCards.length
+                      ? "Reveal next"
+                      : "Open Your Reading ✨"}
+                </Text>
+              </LinearGradient>
+            </TouchableOpacity>
+          )}
+          
+          <View style={styles.cardsContainer}>
+            {/* Position Labels - positioned below cards */}
+            {(selectedSpreadId === "three_card" || selectedSpreadId === "celtic_cross") && drawnCards.length > 0 && (() => {
+              const spread = getSpread(selectedSpreadId!);
+              const positions = selectedSpreadId === "celtic_cross" 
+                ? calculateCelticCrossPositions()
+                : calculateThreeCardAccordionPositions();
+              
+              const isCelticCross = selectedSpreadId === "celtic_cross";
+              const cardWidth = isCelticCross ? 75 : 110;
+              const cardHeight = isCelticCross ? 112 : 160;
+              
+              return (
+                <>
+                  {drawnCards.map((_, index) => {
+                    const position = spread.positions[index];
+                    if (!position) return null;
+                    
+                    const cardPos = positions[index];
+                    if (!cardPos) return null;
+                    
+                    return (
+                      <View
+                        key={`label-${index}`}
+                        style={[
+                          styles.positionLabelContainer,
+                          {
+                            left: cardPos.x + cardWidth / 2 - 35, // Center label (assuming ~70px width)
+                            top: cardPos.y + cardHeight + 10, // add a bit more space below card
+                          },
+                        ]}
+                      >
+                        <View style={styles.positionLabel}>
+                          <Text style={styles.positionLabelText}>{position.label}</Text>
+                        </View>
+                      </View>
+                    );
+                  })}
+                </>
+              );
+            })()}
+
+            {drawnCards.map((drawnCard, index) => {
+              const isRevealed = revealedCards.has(index);
+              const card = getCard(drawnCard.cardId);
+              
+              const scaleAnim = cardScaleAnims.get(index) || new Animated.Value(1);
+              // SIMPLIFIED: Initialize all cards to center of available space
+              const isSingleCard = drawnCards.length === 1;
+              const isThreeCard = selectedSpreadId === "three_card" && drawnCards.length === 3;
+              const isCelticCross = selectedSpreadId === "celtic_cross";
+              const initialCardWidth = isSingleCard ? 200 : (isThreeCard ? 110 : (isCelticCross ? 75 : 120));
+              const initialCardHeight = isSingleCard ? 300 : (isThreeCard ? 160 : (isCelticCross ? 112 : 180));
+              
+              // Simple centering: always use available space
+              const headerHeight = 100;
+              const availableHeight = SCREEN_HEIGHT - headerHeight;
+              const centerX = (SCREEN_WIDTH - initialCardWidth) / 2;
+              const centerY = headerHeight + (availableHeight - initialCardHeight) / 2;
+              
+              const posAnim = cardPositionAnims.get(index) || new Animated.ValueXY({ 
+                x: centerX,
+                y: centerY
+              });
+              const flipAnim = cardFlipAnims.get(index) || new Animated.Value(0);
+
+              const backOpacity = flipAnim.interpolate({
+                inputRange: [0, 0.5, 1],
+                outputRange: [1, 0, 0],
+              });
+
+              const frontOpacity = flipAnim.interpolate({
+                inputRange: [0, 0.5, 1],
+                outputRange: [0, 0, 1],
+              });
+
+              const isReversed = drawnCard.isReversed || false;
+              // In Celtic Cross, card 1 (Challenge) is rotated 90deg to cross horizontally
+              const isChallengeCard = isCelticCross && index === 1;
+
+              // Flip animation for card back: rotates from 0deg to 180deg
+              const backFlipRotate = flipAnim.interpolate({
+                inputRange: [0, 1],
+                outputRange: ['0deg', '180deg'],
+              });
+
+              // Flip animation for card front: rotates from 180deg to final position
+              // If reversed, final position is 180deg (upside down)
+              // If not reversed, final position is 0deg (upright)
+              // Front starts at 180deg (backface) and flips to final position
+              const frontFlipRotate = flipAnim.interpolate({
+                inputRange: [0, 1],
+                outputRange: isReversed 
+                  ? ['180deg', '180deg'] // Reversed: stays at 180deg (upside down)
+                  : ['180deg', '0deg'],  // Upright: flips from 180deg to 0deg
+              });
+              
+              // For Challenge card in Celtic Cross, add 90deg rotation to cross horizontally
+              const challengeRotation = isChallengeCard ? '90deg' : '0deg';
+              
+              const imageSource = isRevealed 
+                ? getCardImageSource(getCardImagePath(card))
+                : getCardImageSource(getCardBackImagePath());
+
+              return (
+                <Animated.View
+                  key={`card-${index}`}
+                  style={[
+                    styles.cardWrapper,
+                    isSingleCard && styles.cardWrapperSingle,
+                    isCelticCross && styles.cardWrapperCeltic,
+                    isThreeCard && styles.cardWrapperThree,
+                    {
+                      transform: [
+                        { translateX: posAnim.x },
+                        { translateY: posAnim.y },
+                        { scale: scaleAnim },
+                      ],
+                    },
+                  ]}
+                >
+                  <TouchableOpacity
+                    style={[
+                      styles.cardPlaceholder,
+                      isSingleCard && styles.cardPlaceholderSingle,
+                      isCelticCross && styles.cardPlaceholderCeltic,
+                      isThreeCard && styles.cardPlaceholderThree,
+                    ]}
+                    onPress={() => {}}
+                    disabled
+                    activeOpacity={0.9}
+                  >
+                    {/* Card Back */}
+                    <Animated.View
+                      style={[
+                        styles.cardFace,
+                        styles.cardBack,
+                        {
+                          opacity: backOpacity,
+                          transform: [
+                            { rotate: backFlipRotate },
+                            { rotate: challengeRotation },
+                          ],
+                        },
+                      ]}
+                    >
+                      <Image
+                        source={getCardImageSource(getCardBackImagePath())}
+                        style={styles.cardImage}
+                        resizeMode="contain"
+                      />
+                    </Animated.View>
+
+                    {/* Card Front - shows in correct orientation (reversed if needed) */}
+                    <Animated.View
+                      style={[
+                        styles.cardFace,
+                        styles.cardFront,
+                        {
+                          opacity: frontOpacity,
+                          transform: [
+                            { rotate: frontFlipRotate },
+                            { rotate: challengeRotation },
+                          ],
+                        },
+                      ]}
+                    >
+                      <Image
+                        source={getCardImageSource(getCardImagePath(card))}
+                        style={styles.cardImage}
+                        resizeMode="contain"
+                      />
+                      {isRevealed && (
+                        <View style={styles.cardLabel}>
+                          <Text style={styles.cardName}>{card.name}</Text>
+                          {drawnCard.isReversed && (
+                            <Text style={styles.reversedLabel}>(Reversed)</Text>
+                          )}
+                        </View>
+                      )}
+                    </Animated.View>
+                  </TouchableOpacity>
+                </Animated.View>
+              );
+            })}
+          </View>
+        </Animated.View>
+
+        {/* Full-screen card modal */}
+        {selectedCardIndex !== null && (
+          <Modal
+            visible={selectedCardIndex !== null}
+            transparent={false}
+            animationType="fade"
+            onRequestClose={handleCloseFullScreen}
+            statusBarTranslucent={true}
+          >
+            <LinearGradient
+              colors={['#1a0033', '#2d1b4e', '#1a0033']}
+              style={styles.modalContainer}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+            >
+              <SafeAreaView style={styles.modalContainer}>
+                <TouchableOpacity
+                  style={styles.modalCloseButton}
+                  onPress={handleCloseFullScreen}
+                >
+                  <Text style={styles.modalCloseText}>✕ Close</Text>
+                </TouchableOpacity>
+                
+                {drawnCards[selectedCardIndex] && (
+                  <>
+                    <View style={styles.fullScreenCardContainer}>
+                      <Image
+                        source={getCardImageSource(
+                          getCardImagePath(getCard(drawnCards[selectedCardIndex].cardId))
+                        )}
+                        style={[
+                          styles.fullScreenCardImage,
+                          drawnCards[selectedCardIndex].isReversed && styles.cardReversed,
+                        ]}
+                        resizeMode="contain"
+                      />
+                    </View>
+                    
+                    <View style={styles.fullScreenCardInfo}>
+                      <Text style={styles.fullScreenCardName}>
+                        {getCard(drawnCards[selectedCardIndex].cardId).name}
+                        {drawnCards[selectedCardIndex].isReversed && " (Reversed)"}
+                      </Text>
+                    </View>
+                  </>
+                )}
+              </SafeAreaView>
+            </LinearGradient>
+          </Modal>
+        )}
+      </SafeAreaView>
+    </LinearGradient>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  shufflingContainer: {
+    flex: 1,
+    position: "relative",
+  },
+  shufflingCard: {
+    position: "absolute",
+    width: 100,
+    height: 150,
+  },
+  shufflingCardImage: {
+    width: "100%",
+    height: "100%",
+  },
+  shufflingTextContainer: {
+    position: "absolute",
+    bottom: 100,
+    left: 0,
+    right: 0,
+    alignItems: "center",
+  },
+  shufflingText: {
+    fontSize: 24,
+    fontWeight: "600",
+    color: "#fff",
+    textShadowColor: "rgba(106, 76, 147, 0.8)",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 20,
+    marginBottom: 8,
+  },
+  shufflingSubtext: {
+    fontSize: 16,
+    color: "#b8a9d9",
+    fontStyle: "italic",
+  },
+  content: {
+    flex: 1,
+    padding: 16,
+    paddingTop: 0,
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: "bold",
+    color: "#fff",
+    marginBottom: 6,
+    textAlign: "center",
+    textShadowColor: "rgba(106, 76, 147, 0.8)",
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 15,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: "#d4c5e8",
+    marginBottom: 4,
+    textAlign: "center",
+    fontStyle: "italic",
+    textShadowColor: "rgba(106, 76, 147, 0.5)",
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 5,
+  },
+  cardsContainer: {
+    flex: 1,
+    position: "relative",
+    width: SCREEN_WIDTH,
+    height: SCREEN_HEIGHT,
+    zIndex: 1,
+  },
+  positionLabelContainer: {
+    position: "absolute",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 70,
+    zIndex: 2,
+  },
+  positionLabel: {
+    backgroundColor: "rgba(26, 0, 51, 0.9)",
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: "rgba(106, 76, 147, 0.6)",
+    shadowColor: "#6a4c93",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.6,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  positionLabelText: {
+    fontSize: 10,
+    fontWeight: "700",
+    color: "#fff",
+    textTransform: "uppercase",
+    letterSpacing: 0.8,
+    textAlign: "center",
+  },
+  cardWrapper: {
+    position: "absolute",
+    width: 120,
+    height: 180,
+  },
+  cardWrapperSingle: {
+    width: 200,
+    height: 300,
+  },
+  cardWrapperCeltic: {
+    position: "absolute",
+    width: 75,
+    height: 112,
+  },
+  cardWrapperThree: {
+    position: "absolute",
+    width: 110,
+    height: 160,
+  },
+  cardPlaceholder: {
+    width: 120,
+    height: 180,
+    borderRadius: 16,
+    overflow: "hidden",
+    shadowColor: "#6a4c93",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.6,
+    shadowRadius: 12,
+    elevation: 8,
+  },
+  cardPlaceholderCeltic: {
+    width: 75,
+    height: 112,
+    borderRadius: 10,
+    overflow: "hidden",
+    shadowColor: "#6a4c93",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.7,
+    shadowRadius: 10,
+    elevation: 8,
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.1)",
+  },
+  cardPlaceholderThree: {
+    width: 110,
+    height: 160,
+    borderRadius: 14,
+    overflow: "hidden",
+    shadowColor: "#6a4c93",
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.8,
+    shadowRadius: 15,
+    elevation: 10,
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.15)",
+  },
+  cardPlaceholderSingle: {
+    width: 200,
+    height: 300,
+    borderRadius: 20,
+    shadowRadius: 25,
+    elevation: 15,
+    borderWidth: 2,
+    borderColor: "rgba(255, 255, 255, 0.2)",
+  },
+  cardFace: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    backfaceVisibility: "hidden",
+  },
+  cardBack: {
+    backgroundColor: "#2d1b4e",
+  },
+  cardFront: {
+    backgroundColor: "#1a1a1a",
+  },
+  cardImage: {
+    width: "100%",
+    height: "100%",
+  },
+  cardReversed: {
+    transform: [{ rotate: "180deg" }],
+  },
+  cardLabel: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: "rgba(26, 0, 51, 0.9)",
+    padding: 8,
+    alignItems: "center",
+    borderTopWidth: 1,
+    borderTopColor: "rgba(106, 76, 147, 0.3)",
+  },
+  cardName: {
+    fontSize: 12,
+    fontWeight: "600",
+    color: "#fff",
+    textAlign: "center",
+  },
+  reversedLabel: {
+    fontSize: 10,
+    color: "#b8a9d9",
+    marginTop: 2,
+  },
+  viewResultsButton: {
+    borderRadius: 12,
+    overflow: "hidden",
+    marginTop: 8,
+    marginBottom: 8,
+    shadowColor: "#6a4c93",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.5,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  buttonGradient: {
+    padding: 18,
+    alignItems: "center",
+  },
+  viewResultsButtonText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#fff",
+    textShadowColor: "rgba(0, 0, 0, 0.3)",
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
+  },
+  modalContainer: {
+    flex: 1,
+  },
+  modalCloseButton: {
+    position: "absolute",
+    top: 50,
+    right: 20,
+    zIndex: 10,
+    backgroundColor: "rgba(26, 0, 51, 0.8)",
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: "rgba(106, 76, 147, 0.3)",
+  },
+  modalCloseText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+  fullScreenCardContainer: {
+    flex: 1,
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: 60,
+    paddingBottom: 100,
+  },
+  fullScreenCardImage: {
+    width: "95%",
+    height: "75%",
+    shadowColor: "#6a4c93",
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.8,
+    shadowRadius: 20,
+    elevation: 12,
+  },
+  fullScreenCardInfo: {
+    position: "absolute",
+    bottom: 40,
+    left: 0,
+    right: 0,
+    alignItems: "center",
+    backgroundColor: "rgba(26, 0, 51, 0.9)",
+    padding: 16,
+    borderTopWidth: 1,
+    borderTopColor: "rgba(106, 76, 147, 0.3)",
+  },
+  fullScreenCardName: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#fff",
+    textAlign: "center",
+    textShadowColor: "rgba(106, 76, 147, 0.8)",
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 10,
+  },
+});

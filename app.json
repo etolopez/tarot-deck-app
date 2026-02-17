@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Tarot Deck",
+    "slug": "tarot-deck",
+    "version": "1.0.0",
+    "scheme": "tarotdeck",
+    "orientation": "portrait",
+    "splash": {
+      "backgroundColor": "#000000"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": ""
+      },
+      "apiBaseUrl": "http://localhost:3000",
+      "solanaRecipientAddress": "66FTEkkqvKa4QMMRXaryf2oGmknTFbyLQrmKRK6qAJkC",
+      "solanaCluster": "mainnet-beta",
+      "solanaRpc": "",
+      "enableSolanaPaymentsAndroid": true,
+      "enableSolanaPaymentsIos": false
+    },
+    "assetBundlePatterns": [
+      "**/*",
+      "apps/mobile/assets/**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tarotdeck.app",
+      "buildNumber": "1"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000000"
+      },
+      "package": "com.tarotdeck.app",
+      "versionCode": 1,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ],
+          "data": [
+            {
+              "scheme": "tarotdeck"
+            }
+          ]
+        }
+      ],
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-asset",
+      "expo-sqlite",
+      "expo-secure-store",
+      "expo-audio"
+    ]
+  }
+}
+
