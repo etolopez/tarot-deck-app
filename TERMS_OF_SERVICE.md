@@ -42,11 +42,30 @@ You must be at least 13 years old to use this App. By using the App, you represe
 - All payments are processed through the Solana blockchain
 - Payments are final and non-refundable
 
+### Credit Pricing
+
+The following credit costs apply per reading:
+- **Single Card Reading**: 1 credit
+- **Three Card Spread (Past, Present, Future)**: 2 credits
+- **Celtic Cross Spread**: 5 credits
+
+Credit packages and pricing are displayed in the app and may be subject to change. Current pricing will always be shown before purchase. Pricing is subject to change, and any changes will be communicated through the app.
+
+### Credit Terms
+
+- **No Cash Value**: Credits have no cash value and cannot be exchanged for money or cryptocurrency
+- **Non-Transferable**: Credits cannot be transferred between accounts or wallets
+- **No Refunds**: Credits purchased are non-refundable. All sales are final
+- **Not a Digital Token**: Credits are not tied to any digital token, cryptocurrency, or blockchain asset. They are virtual credits stored locally in the app
+- **Expiration**: Credits do not expire. Once purchased, credits remain available until used
+- **Account Deletion**: If your account is deleted or banned, all credits associated with your wallet address will be permanently lost and cannot be recovered
+
 ### Refund Policy
 
 - All sales are final
-- Credits cannot be refunded or transferred
+- Credits cannot be refunded, transferred, or exchanged
 - If you experience technical issues, contact support for assistance
+- Credits are virtual and have no monetary value
 
 ## Acceptable Use
 
@@ -127,10 +146,20 @@ We may terminate or suspend your access to the App immediately, without prior no
 - Technical or security reasons
 - At our sole discretion
 
-Upon termination:
+Upon termination or account deletion:
 - Your access to the App will be revoked
-- Your credits will remain associated with your wallet address
+- All credits associated with your wallet address will be permanently lost and cannot be recovered
 - Your reading data may be deleted
+- No refunds will be provided for unused credits
+- Credits have no cash value and cannot be redeemed
+
+### Account Bans
+
+If your account is banned:
+- All credits associated with your wallet address will be permanently forfeited
+- You will lose access to all reading history and data
+- No refunds or compensation will be provided
+- Credits cannot be transferred to another account
 
 ## Governing Law
 
