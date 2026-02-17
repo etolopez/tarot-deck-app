@@ -1,17 +1,20 @@
 {
   "expo": {
-    "name": "Tarot Deck",
+    "name": "Tarot",
     "slug": "tarot-deck",
     "version": "1.0.0",
-    "scheme": "tarotdeck",
+    "scheme": "tarotreading",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "splash": {
-      "backgroundColor": "#000000"
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1f3a"
     },
     "extra": {
       "router": {},
       "eas": {
-        "projectId": ""
+        "projectId": "274523ae-f83c-4eff-b8a1-3d78e3c09384"
       },
       "apiBaseUrl": "http://localhost:3000",
       "solanaRecipientAddress": "66FTEkkqvKa4QMMRXaryf2oGmknTFbyLQrmKRK6qAJkC",
@@ -25,16 +28,19 @@
       "apps/mobile/assets/**/*"
     ],
     "ios": {
+      "icon": "./assets/icon.png",
       "supportsTablet": true,
-      "bundleIdentifier": "com.tarotdeck.app",
+      "bundleIdentifier": "com.tarotreading.app",
       "buildNumber": "1"
     },
     "android": {
+      "icon": "./assets/icon.png",
       "adaptiveIcon": {
-        "backgroundColor": "#000000"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#1a1f3a"
       },
-      "package": "com.tarotdeck.app",
-      "versionCode": 1,
+      "package": "com.tarotreading.app",
+      "versionCode": 2,
       "intentFilters": [
         {
           "action": "VIEW",
@@ -44,7 +50,7 @@
           ],
           "data": [
             {
-              "scheme": "tarotdeck"
+              "scheme": "tarotreading"
             }
           ]
         }
@@ -63,7 +69,7 @@
       "expo-sqlite",
       "expo-secure-store",
       "expo-audio"
-    ]
+    ],
+    "owner": "simplyeto"
   }
 }
-

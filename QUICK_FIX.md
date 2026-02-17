@@ -21,7 +21,7 @@ You can temporarily remove the icon requirement by editing `app.json`:
 
 ## Issue 2: No Development Build Installed
 
-The error "No development build (com.tarotdeck) for this project is installed" means you need to build and install the app first.
+The error "No development build (com.tarotreading) for this project is installed" means you need to build and install the app first.
 
 ### Steps to Fix:
 

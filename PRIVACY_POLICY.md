@@ -51,6 +51,7 @@ We use the collected information to:
 ### Third-Party Services
 
 We may use third-party services for:
+
 - Payment processing (Solana blockchain)
 - Analytics (if applicable)
 - Error tracking (if applicable)
@@ -122,8 +123,8 @@ If you are a California resident, you have additional rights under the Californi
 
 If you have questions about this Privacy Policy, please contact us at:
 
-**Email**: [Your support email]
-**Website**: [Your website if applicable]
+**Email**: balanceskr@gmail.com
+**Website**: www.simplyeto.com
 
 ## Consent
 
@@ -131,4 +132,4 @@ By using Tarot Deck App, you consent to this Privacy Policy and agree to its ter
 
 ## Disclaimer
 
-Tarot readings provided by this app are for entertainment and reflection purposes only. They are not intended as medical, legal, financial, or professional advice.
+Tarot readings provided by this app are for entertainment and reflection purposes only. Card imagery in this app is based on public-domain versions of the 1909 tarot illustrations by Pamela Colman Smith and Arthur Edward Waite. They are not intended as medical, legal, financial, or professional advice.

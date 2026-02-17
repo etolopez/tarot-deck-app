@@ -1,4 +1,4 @@
-package com.tarotdeck.app
+package com.tarotreading.app
 
 import android.os.Build
 import android.os.Bundle

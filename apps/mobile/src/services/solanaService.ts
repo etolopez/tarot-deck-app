@@ -37,7 +37,7 @@ const WALLET_AUTH_TOKEN_KEY = "@tarot:wallet:auth_token";
  * uri must be absolute https (required by MWA); no external webpage link.
  */
 const APP_IDENTITY = {
-  name: "Tarot Deck",
+  name: "Tarot",
   uri: "https://localhost/",
   icon: "favicon.ico",
 } as const;

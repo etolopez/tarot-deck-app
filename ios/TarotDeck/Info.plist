@@ -27,8 +27,8 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>tarotdeck</string>
-          <string>com.tarotdeck.app</string>
+          <string>tarotreading</string>
+          <string>com.tarotreading.app</string>
         </array>
       </dict>
       <dict>

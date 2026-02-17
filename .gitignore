@@ -38,6 +38,7 @@ Thumbs.db
 .cursor/
 
 # Android
+android/.kotlin/
 android/app/.cxx/
 android/.idea/
 android/local.properties

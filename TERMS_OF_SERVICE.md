@@ -9,6 +9,7 @@ By accessing or using Tarot Deck App ("the App"), you agree to be bound by these
 ## Description of Service
 
 Tarot Deck App is a mobile application that provides:
+
 - Digital tarot card readings
 - Multiple tarot spread options
 - Credit-based payment system using Solana blockchain
@@ -45,6 +46,7 @@ You must be at least 13 years old to use this App. By using the App, you represe
 ### Credit Pricing
 
 The following credit costs apply per reading:
+
 - **Single Card Reading**: 1 credit
 - **Three Card Spread (Past, Present, Future)**: 2 credits
 - **Celtic Cross Spread**: 5 credits
@@ -147,6 +149,7 @@ We may terminate or suspend your access to the App immediately, without prior no
 - At our sole discretion
 
 Upon termination or account deletion:
+
 - Your access to the App will be revoked
 - All credits associated with your wallet address will be permanently lost and cannot be recovered
 - Your reading data may be deleted
@@ -156,6 +159,7 @@ Upon termination or account deletion:
 ### Account Bans
 
 If your account is banned:
+
 - All credits associated with your wallet address will be permanently forfeited
 - You will lose access to all reading history and data
 - No refunds or compensation will be provided
@@ -185,8 +189,8 @@ These Terms constitute the entire agreement between you and Tarot Deck App regar
 
 For questions about these Terms, please contact:
 
-**Email**: [Your support email]
-**Website**: [Your website if applicable]
+**Email**: balanceskr@gmail.com
+**Website**: www.simplyeto.com
 
 ## Acknowledgment
 
