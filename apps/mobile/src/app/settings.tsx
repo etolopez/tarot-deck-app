@@ -389,12 +389,22 @@ export default function SettingsScreen() {
                   theme.typography.caption,
                   {
                     fontStyle: 'italic',
+                    marginBottom: theme.spacing.md,
                   }
                 ]}>
                   Tarot readings are provided for reflection and entertainment
                   purposes only. They are not intended as medical, legal, or
                   financial advice. Please use your own judgment and consult
                   professionals for important decisions.
+                </Text>
+                <Text style={[
+                  theme.typography.caption,
+                  {
+                    fontStyle: 'italic',
+                    color: theme.colors.text.tertiary,
+                  }
+                ]}>
+                  Card imagery in this app is based on public-domain versions of the 1909 tarot illustrations by Pamela Colman Smith and Arthur Edward Waite.
                 </Text>
               </GlassCard>
             </View>
