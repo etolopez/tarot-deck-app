@@ -1,6 +1,13 @@
-# Tarot Reading App - MVP Implementation
+# Tarot Deck App
 
-A mobile tarot reading application with AI-generated narratives, built with React Native (Expo) and Node.js backend.
+A mobile tarot reading application with Solana payments, built with React Native (Expo) and Node.js backend.
+
+## Legal Documents
+
+- [LICENSE](LICENSE) - MIT License
+- [COPYRIGHT](COPYRIGHT) - Copyright Information
+- [PRIVACY_POLICY.md](PRIVACY_POLICY.md) - Privacy Policy
+- [TERMS_OF_SERVICE.md](TERMS_OF_SERVICE.md) - Terms of Service
 
 ## Architecture
 
