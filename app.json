@@ -2,7 +2,7 @@
   "expo": {
     "name": "Tarot",
     "slug": "tarot-deck",
-    "version": "1.0.0",
+    "version": "1.1",
     "scheme": "tarotreading",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -31,7 +31,7 @@
       "icon": "./assets/icon.png",
       "supportsTablet": true,
       "bundleIdentifier": "com.tarotreading.app",
-      "buildNumber": "1"
+      "buildNumber": "7"
     },
     "android": {
       "icon": "./assets/icon.png",
@@ -40,7 +40,7 @@
         "backgroundColor": "#1a1f3a"
       },
       "package": "com.tarotreading.app",
-      "versionCode": 2,
+      "versionCode": 7,
       "intentFilters": [
         {
           "action": "VIEW",

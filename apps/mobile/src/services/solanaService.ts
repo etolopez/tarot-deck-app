@@ -21,7 +21,12 @@ import {
   LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
 import { logger } from "../core/logger";
-import { grantCredits, setCurrentAccountId, getCurrentAccountId } from "./creditsService";
+import {
+  grantCredits,
+  grantWelcomeCreditsIfEligible,
+  setCurrentAccountId,
+  getCurrentAccountId,
+} from "./creditsService";
 import { getConnection, CLUSTER, addressToPublicKey } from "../config/solana";
 import type { WalletAuthResult, SolanaCreditPack } from "../types/solana";
 import type { AppConfig } from "../types/config";
@@ -280,6 +285,15 @@ export async function connectWallet(): Promise<WalletAuthResult> {
 
     // Set wallet address as account ID for credits
     await setCurrentAccountId(res.address);
+
+    // Grant 5 free welcome credits to new wallets (first-time connect)
+    const welcome = await grantWelcomeCreditsIfEligible(res.address);
+    if (welcome.granted) {
+      logger.info("solana.wallet.connect.welcome_credits", {
+        address: `${res.address.substring(0, 8)}...`,
+        newBalance: welcome.newBalance,
+      });
+    }
 
     logger.info("solana.wallet.connect.success", {
       address: `${res.address.substring(0, 8)}...`,

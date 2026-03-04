@@ -9,6 +9,9 @@ import { logger } from "../core/logger";
 import type { CreditSource, CreditLedgerEntry } from "../types/credits";
 import { InsufficientCreditsError } from "../types/credits";
 
+/** Number of free credits granted to each new wallet on first connect */
+const WELCOME_CREDITS = 5;
+
 /**
  * Wallet addresses with infinite credits (dev/testing).
  * When the user connects one of these wallets, they get unlimited credits.
@@ -294,6 +297,53 @@ export async function grantCredits(
   } finally {
     releaseLock();
   }
+}
+
+/**
+ * Grant welcome credits to a new wallet (first-time connect).
+ * Eligible when: not a dev wallet, balance is 0, and no ledger entries exist.
+ * Returns whether credits were granted and the new balance if so.
+ */
+export async function grantWelcomeCreditsIfEligible(
+  accountId: string,
+): Promise<{ granted: boolean; newBalance?: number }> {
+  if (hasInfiniteCredits(accountId)) {
+    logger.info("credits.welcome.skipped.dev_wallet", {
+      accountId: `${accountId.substring(0, 8)}...`,
+    });
+    return { granted: false };
+  }
+
+  const balance = await loadBalance(accountId);
+  if (balance > 0) {
+    logger.info("credits.welcome.skipped.has_balance", {
+      accountId: `${accountId.substring(0, 8)}...`,
+      balance,
+    });
+    return { granted: false };
+  }
+
+  const ledger = await loadLedger(accountId);
+  if (ledger.length > 0) {
+    logger.info("credits.welcome.skipped.existing_account", {
+      accountId: `${accountId.substring(0, 8)}...`,
+    });
+    return { granted: false };
+  }
+
+  const { newBalance } = await grantCredits(
+    WELCOME_CREDITS,
+    "promo",
+    undefined,
+    "Welcome credits for new wallet",
+    accountId,
+  );
+  logger.info("credits.welcome.granted", {
+    accountId: `${accountId.substring(0, 8)}...`,
+    credits: WELCOME_CREDITS,
+    newBalance,
+  });
+  return { granted: true, newBalance };
 }
 
 /**
